@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Medill Cherubs</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title><?php wp_title('', true, 'right'); ?> - <?php echo get_bloginfo("name") ?></title>
 
   <!-- icons & favicons -->
   <!-- For iPhone 4 -->
@@ -27,12 +31,12 @@
   <![endif]-->
 
   <? // SCRIPTS ?>
-  <?php wp_enqueue_script( "jquery-script", get_template_directory_uri() . "/jquery/jquery-1.11.3.min.js" ); ?>
-  <?php wp_enqueue_script( "bootstrap-script", get_template_directory_uri() . "/bootstrap/js/bootstrap.min.js" ); ?>
+  <?php wp_enqueue_script("jquery-js", get_template_directory_uri() . "/js/jquery-1.11.3.min.js"); ?>
+  <?php wp_enqueue_script("foundation-js", get_template_directory_uri() . "/js/foundation.min.js"); ?>
 
   <? // STYLES ?>
-  <?php wp_enqueue_style("bootstrap-style", get_template_directory_uri() . "/bootstrap/css/bootstrap.min.css" ); ?>
-  <?php wp_enqueue_style("cherubs-style", get_template_directory_uri() . "/style.css" ); ?>
+  <?php wp_enqueue_style("foundation-css", get_template_directory_uri() . "/css/foundation.min.css"); ?>
+  <?php wp_enqueue_style("cherubs-css", get_template_directory_uri() . "/style.css"); ?>
 
   <?php wp_head(); ?>
 
