@@ -1,6 +1,11 @@
+.htaccess
 wp-admin
 wp-includes
-wp*
+wp-content/plugins
+wp-content/upgrade
+wp-content/themes/twentyfifteen
+wp-content/themes/index.php
+wp-content/index.php
 *.php
 license.txt
 readme.html
