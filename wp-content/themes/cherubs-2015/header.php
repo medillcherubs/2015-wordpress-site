@@ -41,4 +41,19 @@
   <?php wp_head(); ?>
 
 </head>
-<body>
+<body <?php body_class(); ?>>
+
+  <div class="row container">
+    <div class="twelve columns">
+      <header role="banner" id="top-header">
+
+        <div class="siteinfo">
+          <h1><a class="brand" id="logo" href="<?php echo get_bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+        </div>
+
+        <?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+
+      </header> <!-- end header -->
+    </div>
+
+    <div class="content twelve columns">
