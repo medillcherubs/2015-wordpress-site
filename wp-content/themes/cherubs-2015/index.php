@@ -1,4 +1,4 @@
-!!!
+BEFORE HEADER YO YO!!!
 <?php get_header(); ?>
-Hey there
+BODY AND SUCH
 <?php get_footer(); ?>
