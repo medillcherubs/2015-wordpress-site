@@ -14,11 +14,12 @@ You don't need to use MAMP, but it's probably the easiest way to get PHP, MySQL 
   * `php5.5.23_X`
   * `php5.6.7_X`
 * Set the MAMP Document Root to the `2015-wordpress-site` folder.
+* Create a new mySQL table named "wordpress". For example, you can use [SequelPro](http://www.sequelpro.com/) to do this easily.
 * Start the MAMP servers.
 * Open http://localhost:8888 and set up Wordpress.
-    - Create a new mySQL table named "wordpress". For example, you can use [SequelPro](http://www.sequelpro.com/) to do this easily.
     - Usually using "root" for your username and password will work.
-* View http://localhost:8888/MAMP/ for your MySQL configuration.
+    - View http://localhost:8888/MAMP/ for your MySQL configuration.
+* Login to the Wordpress dashboard, go to Appearance, Themes, and activate the Cherubs theme.
 
 ## Key Files
 

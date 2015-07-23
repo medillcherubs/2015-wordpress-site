@@ -1,7 +1,6 @@
 .htaccess
 wp-admin
 wp-includes
-wp-content/plugins
 wp-content/upgrade
 wp-content/themes/twentyfifteen
 wp-content/themes/index.php
