@@ -28,6 +28,14 @@ All files are in `wp-content/themes/cherubs-2015`:
 * `style.css` — Main stylesheet
 * `header.php` — Add CSS `link` and JS `script` tags here
 
+## Theme Customization
+
+### Top Menu
+
+To enable menus, your theme must add support in `functions.php`.
+
+In `Appearance > Menus`, add a menu called `Top Navigation`. Add pages there.
+
 ## Deployment
 
 The target PHP version is 5.4.24. There is no FTP access.
