@@ -47,18 +47,21 @@
 
     <!-- HEADER -->
     <div class="twelve columns">
-      <header role="banner" class="header">
-        <!-- MAIN LOGO -->
-        <div class="siteinfo">
-          <h1 class="logo-header">
-            <a class="logo" href="<?php echo get_bloginfo('url'); ?>">
-              <img src="<?php echo get_template_directory_uri() . "/images/logo-small.png" ?> " alt="">
-            </a>
-          </h1>
-        </div>
-        <?php // bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+      <!-- MAIN LOGO -->
+      <header role="banner" class="logo-header">
+        <a class="logo" href="<?php echo get_bloginfo('url'); ?>">
+          <img src="<?php echo get_template_directory_uri() . "/images/logo-small.png" ?> " alt="">
+        </a>
       </header>
+
+      <!-- MENU -->
+      <?php wp_nav_menu( array(
+          "theme_location" => "header-menu",
+          "menu_class" => "navigation-menu"
+        ) ); ?>
+
     </div> <!-- HEADER -->
+    <?php // bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 
     <!-- CONTENT -->
     <div class="content twelve columns">
