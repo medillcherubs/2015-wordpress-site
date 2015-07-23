@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medill Cherubs</title>
+
+  <!-- icons & favicons -->
+  <!-- For iPhone 4 -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/h/apple-touch-icon.png">
+  <!-- For iPad 1-->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/m/apple-touch-icon.png">
+  <!-- For iPhone 3G, iPod Touch and Android -->
+  <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/l/apple-touch-icon-precomposed.png">
+  <!-- For Nokia -->
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/l/apple-touch-icon.png">
+  <!-- For everything else -->
+  <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
+
+  <!-- media-queries.js (fallback) -->
+  <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <!-- html5.js -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <? // SCRIPTS ?>
+  <?php wp_enqueue_script( "jquery-script", get_template_directory_uri() . "/jquery/jquery-1.11.3.min.js" ); ?>
+  <?php wp_enqueue_script( "bootstrap-script", get_template_directory_uri() . "/bootstrap/js/bootstrap.min.js" ); ?>
+
+  <? // STYLES ?>
+  <?php wp_enqueue_style("bootstrap-style", get_template_directory_uri() . "/bootstrap/css/bootstrap.min.css" ); ?>
+  <?php wp_enqueue_style("cherubs-style", get_template_directory_uri() . "/style.css" ); ?>
+
+  <?php wp_head(); ?>
+
+</head>
+<body>
