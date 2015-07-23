@@ -44,16 +44,21 @@
 <body <?php body_class(); ?>>
 
   <div class="row container">
+
+    <!-- HEADER -->
     <div class="twelve columns">
-      <header role="banner" id="top-header">
-
+      <header role="banner" class="header">
+        <!-- MAIN LOGO -->
         <div class="siteinfo">
-          <h1><a class="brand" id="logo" href="<?php echo get_bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+          <h1 class="logo-header">
+            <a class="logo" href="<?php echo get_bloginfo('url'); ?>">
+              <img src="<?php echo get_template_directory_uri() . "/images/logo-small.png" ?> " alt="">
+            </a>
+          </h1>
         </div>
+        <?php // bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+      </header>
+    </div> <!-- HEADER -->
 
-        <?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-
-      </header> <!-- end header -->
-    </div>
-
+    <!-- CONTENT -->
     <div class="content twelve columns">
