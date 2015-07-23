@@ -53,6 +53,16 @@ body {
   margin-right: -3px;
 }
 
+.menu-item:first-child {
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.menu-item:last-child {
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
 .menu-item:hover {
   background: #C9C9C9;
 }
