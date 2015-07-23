@@ -32,9 +32,9 @@ All files are in `wp-content/themes/cherubs-2015`:
 
 ### Top Menu
 
-To enable menus, your theme must add support in `functions.php`.
+In `Appearance > Menus`, add a menu called `Top Navigation`. Add pages and categories there.
 
-In `Appearance > Menus`, add a menu called `Top Navigation`. Add pages there.
+Theme must add menu support in `functions.php`.
 
 ## Deployment
 

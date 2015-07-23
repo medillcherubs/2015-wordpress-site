@@ -37,6 +37,11 @@ body {
 
 .menu-top-navigation-container {
   text-align: center;
+  font-family: 'Open Sans', Arial;
+}
+
+.navigation-menu {
+  margin-left: 0;
 }
 
 .menu-item {
