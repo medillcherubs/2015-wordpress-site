@@ -7,5 +7,73 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This theme, like WordPress, is licensed under the GPL.
+STRUCTURE
+.container
+  .twelve.columns
+    header.logo-header
+  .content.twelve.columns
+
 */
+
+body {
+  background-color: #F9F9F9;
+}
+
+.logo-header {
+  text-align: center;
+  max-width: 420px;
+  margin: 20px auto;
+}
+
+.main {
+  background-color: white;
+}
+
+.content {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  min-height: 100px;
+}
+
+.menu-top-navigation-container {
+  text-align: center;
+  font-family: 'Open Sans', Arial;
+}
+
+.navigation-menu {
+  margin-left: 0;
+}
+
+.menu-item {
+  position: relative;
+  padding: 4px 16px;
+  margin: 0;
+  -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+  line-height: 28px;
+  background: #E9E9E9;
+  display: inline-block;
+  float: none;
+  margin-right: -3px;
+}
+
+.menu-item:first-child {
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.menu-item:last-child {
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.menu-item:hover {
+  background: #C9C9C9;
+}
+
+.menu-item a {
+  color: #000 !important;
+  font-size: 10pt !important;
+  font-weight: 300;
+}
