@@ -53,3 +53,9 @@ tail -f /Applications/MAMP/logs/php_error.log
 ## Deployment
 
 The target PHP version is 5.4.24. There is no FTP access.
+
+## Create in Production
+
+### Categories
+
+* slug: full-width
