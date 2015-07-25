@@ -21,12 +21,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Open Sans;
-  font-weight: normal;
   color: #222;
+  text-rendering: optimizeLegibility;
 }
 
 body a {
-    color: #412C67;
+  color: #412C67;
 }
 
 .logo-header {
@@ -44,6 +44,8 @@ body a {
   border: 1px solid #CCC;
   min-height: 100px;
 }
+
+/* MENUS -------------------------------------------------------------- */
 
 .menu-top-navigation-container {
   text-align: center;
@@ -109,7 +111,6 @@ body a {
   font-weight: normal;
 }
 
-
 .footer-navigation-menu .menu-item {
   color: #222;
   padding: 0;
@@ -153,6 +154,116 @@ input.search {
   margin: 0;
   display: inline-block;
 }
+
+/* SINGLE POST -------------------------------------------------------------- */
+
+article {
+  padding: 40px 20px;
+}
+
+article header {
+  margin-bottom: 30px;
+}
+
+article h1 {
+  font-size: 2em;
+  margin: 0 0 2px 0;
+  font-weight: 700;
+}
+
+article h2 {
+  font-weight: 300;
+  color: #555;
+  font-size: 1.2em;
+  margin: 8px 0;
+}
+
+.main-content {
+  float: left;
+  width: 532px;
+}
+
+article p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333;
+  font-size: 1em;
+  line-height: 1.5em;
+  width: 100%;
+  max-width: 545px;
+}
+
+.small-label {
+  text-transform: uppercase;
+  color: #A6A6A6;
+  font-size: 11px;
+}
+
+.article-authors-box {
+  max-width: 200px;
+  width: 100%;
+  float: right;
+  margin: 0 0 0 20px;
+  border-top: 1px solid #DDD;
+  padding: 5px 5px 0;
+}
+
+.article-authors {
+  list-style: none;
+  margin: 0;
+}
+
+.author {
+  float: left;
+  max-width: 200px;
+  margin: 0 0 10px 0;
+}
+
+.author > div {
+  float: left;
+}
+
+.author-info {
+  max-width: 150px;
+}
+
+.author-name {
+  padding: 5px 0 0 7px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.author-name a {
+  color: #412C67;
+}
+
+.author-image {
+  width: 40px;
+  border-radius: 30px;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 675px;
+}
+
+.wp-caption {
+  width: 100% !important;
+}
+
+.wp-caption img {
+  width: 100% !important;
+}
+
+.wp-caption-text {
+  color: #888;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 4px 0 20px 0;
+}
+
 
 /* temporary until we can get rid of it */
 .footer-navigation-menu .search-input {
@@ -224,9 +335,25 @@ input.search {
   margin-bottom: 6px;
 }
 
+@media screen and (max-width: 1012px) {
+  .article-authors-box {
+    float: none;
+    max-width: 100%;
+    margin: 0 0 20px;
+    border-top: none;
+    padding: 0px;
+  }
+
+  .author {
+    float: left;
+    max-width: 100%;
+    margin: 0 20px 10px 0;
+  }
+}
+
 @media screen and (min-width: 400px) {
    .cherub-box {
-         margin-right: 10px;
+     margin-right: 10px;
    }
 }
 
@@ -234,7 +361,7 @@ input.search {
 /* GLOBAL RULE FOR NOW... */
 
 ul, ol {
-  font-size: 14px;
+  /*font-size: 14px;*/
   line-height: 1.6;
   margin-bottom: 17px;
   list-style-position: inside;
