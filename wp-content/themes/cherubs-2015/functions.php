@@ -13,6 +13,10 @@ function register_my_menus(){
   );
 }
 
+function full_width(){
+	return in_category('full-width') == 1;
+}
+
 function related_stories($related_stories){
 
 	if ($related_stories) {
