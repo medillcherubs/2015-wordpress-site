@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 
+.iframe {
+  width: 100% !important;
+}
+
 .logo-header {
   text-align: center;
   max-width: 420px;
