@@ -222,7 +222,7 @@ article p {
     padding: 0px;
   }
 
-  .author {
+  body .author {
     float: left;
     max-width: 100%;
     margin: 0 20px 10px 0;
@@ -234,13 +234,13 @@ article p {
   margin: 0;
 }
 
-.author {
+body .author {
   float: left;
   max-width: 200px;
   margin: 0 20px 10px 0;
 }
 
-.author > div {
+body .author > div {
   float: left;
 }
 
