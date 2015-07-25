@@ -15,13 +15,13 @@
 
 <div class="profile-header">
 
-  <h1 class="profile_title h2">
+  <h1 class="profile-title">
 
     <?php echo $curauth->display_name; ?>
 
-    <span>
+    <span class="profile-location">
       <?php echo get_the_author_meta( 'hometown', $curauth->ID ) ?>
-      <span class="bullet">&#149;</span>
+      <span class="profile-bullet">&#149;</span>
       <?php echo get_the_author_meta( "high_school_name", $curauth->ID ); ?>
     </span>
 
@@ -39,31 +39,31 @@
   <div id="main" class="six columns clearfix" role="main">
 
     <div class="profile-section">
-      <h3>Bio</h3>
-      <p><?php echo get_the_author_meta( "bio", $curauth->ID ); ?></p>
+      <h3 class="profile-section-title">Bio</h3>
+      <p class="profile-section-body"><?php echo get_the_author_meta( "bio", $curauth->ID ); ?></p>
     </div>
 
     <div class="profile-section">
-      <h3>Journalism highlight</h3>
-      <p><?php echo get_the_author_meta( "journalism_highlight", $curauth->ID ); ?></p>
+      <h3 class="profile-section-title">Journalism highlight</h3>
+      <p class="profile-section-body"><?php echo get_the_author_meta( "journalism_highlight", $curauth->ID ); ?></p>
     </div>
 
     <div class="profile-section">
-      <h3>Favorite cherub moment</h3>
-      <p><?php echo get_the_author_meta( "favorite_cherub_moment", $curauth->ID ); ?></p>
+      <h3 class="profile-section-title">Favorite cherub moment</h3>
+      <p class="profile-section-body"><?php echo get_the_author_meta( "favorite_cherub_moment", $curauth->ID ); ?></p>
     </div>
 
     <?php if (get_the_author_meta( "twitter", $curauth->ID )) : ?>
       <div class="profile-section">
-        <h3>Twitter</h3>
-        <p><?php echo get_the_author_meta( "twitter", $curauth->ID ); ?></p>
+        <h3 class="profile-section-title">Twitter</h3>
+        <p class="profile-section-body"><?php echo get_the_author_meta( "twitter", $curauth->ID ); ?></p>
       </div>
     <?php endif; ?>
 
     <?php if (get_the_author_meta( "instagram", $curauth->ID )) : ?>
       <div class="profile-section">
-        <h3>Instagram</h3>
-        <p><?php echo get_the_author_meta( "instagram", $curauth->ID ); ?></p>
+        <h3 class="profile-section-title">Instagram</h3>
+        <p class="profile-section-body"><?php echo get_the_author_meta( "instagram", $curauth->ID ); ?></p>
       </div>
     <?php endif; ?>
 
@@ -71,7 +71,7 @@
 
       <div class="profile-section">
 
-        <h3>Stories by <?php echo get_the_author_meta("first_name") ?></h3>
+        <h3 class="profile-section-title">Stories by <?php echo get_the_author_meta("first_name") ?></h3>
 
         <ul>
           <?php while (have_posts()) : the_post(); ?>
