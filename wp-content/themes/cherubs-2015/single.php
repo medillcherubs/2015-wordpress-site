@@ -4,8 +4,6 @@
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<?php $bottom_byline = in_category(117); ?>
-      <?php if (!$bottom_byline && get_post_format() == 'gallery') $bottom_byline = true; ?>
 		<?php $full_width_post = in_category(79); ?>
 
 		<?php if ($full_width_post) { ?>
@@ -54,13 +52,7 @@
                                         <?php endif; ?>
 
 					<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
-					<h2 class="single-subtitle"><?php //the_subtitle(); ?></h2>
-
-					<?php// ob_start(); ?>
-						<!-- <div class="article-authors-box clearfix">
-              <?php// stories_by(); ?>
-						</div> -->
-					<?php// $authors_box = ob_get_clean(); ?>
+					<h2 class="single-subtitle"><?php the_subtitle(); ?></h2>
 
 
 				</header> <!-- end article header -->
@@ -71,51 +63,20 @@
 					
 					<?php $content = apply_filters('the_content', $raw_content) ?>
 
-					<?php if (!$bottom_byline) : ?>
-						
-						<div class="article-authors-box clearfix">
-							<?php //stories_by(); ?>
-							<?php
-								$mediums = get_post_meta($post->ID, "alsoby");
+					<div class="body clearfix">
 
-								if ($mediums) {
-									foreach ($mediums as $medium) {
-
-										$pieces = split(":", $medium);
-										$authors = split(",", $pieces[1]);                                                                                                                                     
-										alsoby($pieces[0], $authors);
-									}
-								}
-							?>
+						<div class="main-content">
+							<?php echo $content; ?>
 						</div>
 
-					<?php endif; ?>
+						<div class="article-authors-box clearfix">
+							<?php stories_by(); ?>
+						</div>
 
-					<?php echo $content; ?>
-					
-					
 
-					<?php // the_content(); ?>
-					<?php // $content = get_the_content(); ?>
-					<?php // echo prefix_insert_after_paragraph($buffer, 1, do_shortcode($content)); ?>
+					</div>
 
-					<?php if ($bottom_byline) : ?>
-						<div class="full-width">
-								<?php stories_by(); ?>
-								<?php
-								$mediums = get_post_meta($post->ID, "alsoby");
 
-								if ($mediums) {
-									foreach ($mediums as $medium) {
-
-										$pieces = split(":", $medium);
-										$authors = split(",", $pieces[1]);                                                                                                                                                
-										alsoby($pieces[0], $authors);
-									}
-								}
-							?>
-							</div>
-					<?php endif; ?>
 			
 				</section> <!-- end article section -->
 				

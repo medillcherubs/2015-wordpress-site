@@ -39,10 +39,66 @@ function menu_search($items){
 
     return $items . $search;
 }
+
 add_filter('wp_nav_menu_items','menu_search');
 
 function get_profile_image_path() {
   return "http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/";
 }
+
+function stories_by() {
+
+  $last_names = get_the_coauthor_meta("last_name"); 
+	$user_logins = get_the_coauthor_meta("user_login"); 
+	$first_names = get_the_coauthor_meta("first_name"); 
+	$ids = get_the_coauthor_meta("ID");
+
+	$authors = array();
+
+	foreach ($last_names as $key => $last) {
+		$authors[] = (object) array(
+			// "image" => "http://www.medillcherubs.org/2013/wp-content/themes/medill-cherubs/profile-images/$last" . str_replace(" ", "", $first_names[$key]) . ".png",
+			"image" => 'http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/annesnabes-150x150.jpg',
+			"last_name" => $last_names[$key],
+			"first_name" => $first_names[$key],
+			"name" => $first_names[$key]." ".$last_names[$key],
+      "login" => $user_logins[$key],
+      "id" => $ids[$key]
+		);
+	}
+	
+	cherub_authors($authors);
+}
+
+?>
+
+<?php function cherub_authors($authors, $type = "Story") { ?>
+
+<?php if ($type == "Story") ?> 
+
+<h5 class="small-label stories-by"><?php echo $type; ?> by</h5>
+
+	<ul class="article-authors clearfix"> 
+	<?php foreach ($authors as $author) : ?>
+    
+		<li class="author clearfix">	
+			<div class="author-image-container">
+				<!-- <img src="http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/<?php //echo preg_replace('/[\s+\-]/', '', strtolower($author->login)); ?>-150x150.jpg" class="author-image" /> -->
+				<img src="<?php echo $author->image ?>" class="author-image" />
+
+			</div>
+			<div class="author-info">
+        <?php $url = get_author_posts_url( $author->id ); ?>
+				<p class="author-name">
+          <a href="<?php echo $url ?>"><?php echo $author->name; ?></a>
+        </p>
+			</div>
+		</li>
+	<?php endforeach; ?>
+</ul>
+
+
+<?php 	
+}	
 
 ?>
