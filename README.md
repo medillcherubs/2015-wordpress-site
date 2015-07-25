@@ -36,6 +36,14 @@ In `Appearance > Menus`, add a menu called `Top Navigation`. Add pages and categ
 
 Theme must add menu support in `functions.php`.
 
+## Development
+
+View MAMP logs:
+
+```
+tail -f /Applications/MAMP/logs/php_error.log 
+```
+
 ## Deployment
 
 The target PHP version is 5.4.24. There is no FTP access.
