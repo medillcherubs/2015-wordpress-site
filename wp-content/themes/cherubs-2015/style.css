@@ -164,7 +164,13 @@ input.search {
 /* SINGLE POST -------------------------------------------------------------- */
 
 .post {
-  padding: 40px 20px;
+  padding: 20px 0;
+}
+
+@media screen and (min-width: 600px) {
+  .post {
+    padding: 40px 20px;
+  }
 }
 
 .post header {
