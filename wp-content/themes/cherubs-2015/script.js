@@ -1,10 +1,6 @@
 // resize homepage video on load and resize
 (function() {
 
-  var ratios = {
-    vimeo: 9 / 16
-  };
-
   document.addEventListener("DOMContentLoaded", function(event) {
     resizeAllEmbeds();
     window.addEventListener("resize", resizeAllEmbeds);
@@ -18,10 +14,9 @@
   function resizeEmbed(embed) {
     var width = embed.getBoundingClientRect().width;
     var src = embed.src;
-    var ratio = 1;
-    if (src.indexOf("vimeo.com") > -1) ratio = ratios.vimeo;
-    var height = (width * ratio);
-    console.log(embed, width, height);
+    var height = embed.getBoundingClientRect().height;
+    if (src.indexOf("vimeo.com") > -1) height = width * 9 / 16;
+    else if (src.indexOf("soundcloud.com") > -1) height = 250;
     embed.setAttribute("height", height);
   }
 
