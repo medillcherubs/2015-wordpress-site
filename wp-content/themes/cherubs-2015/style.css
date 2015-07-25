@@ -313,8 +313,13 @@ article p {
   font-weight: 300;
 }
 
-/* CLASS OF 2015 */
+.profile-links {
+  line-height: 1.6;
+  margin-bottom: 17px;
+  list-style-position: inside;
+}
 
+/* CLASS OF 2015 */
 
 .cherub-box {
  float: left;
@@ -357,15 +362,6 @@ article p {
    }
 }
 
-
-/* GLOBAL RULE FOR NOW... */
-
-ul, ol {
-  /*font-size: 14px;*/
-  line-height: 1.6;
-  margin-bottom: 17px;
-  list-style-position: inside;
-}
 
 /* STORY LINKS */
 
