@@ -50,7 +50,7 @@
       <!-- TOP MENU -->
       <?php wp_nav_menu( array(
           "theme_location" => "header-menu",
-          "menu_class" => "navigation-menu"
+          "menu_class" => "top-menu"
         ) ); ?>
 
     </div> <!-- HEADER -->

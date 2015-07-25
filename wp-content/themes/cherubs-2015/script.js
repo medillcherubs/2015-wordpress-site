@@ -8,7 +8,6 @@
       var width = embed.getBoundingClientRect().width;
       var height = (width * 9 / 16);
       embed.setAttribute("height", height);
-      console.log(width, height);
     }
     window.addEventListener("resize", resize);
   });
