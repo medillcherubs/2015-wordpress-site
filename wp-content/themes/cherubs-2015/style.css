@@ -265,8 +265,6 @@ article p {
 }
 
 
-
-
 /* temporary until we can get rid of it */
 .footer-navigation-menu .search-input {
   display: none;
@@ -339,7 +337,7 @@ article p {
 
 @media screen and (min-width: 400px) {
    .cherub-box {
-         margin-right: 10px;
+     margin-right: 10px;
    }
 }
 
@@ -347,7 +345,7 @@ article p {
 /* GLOBAL RULE FOR NOW... */
 
 ul, ol {
-  font-size: 14px;
+  /*font-size: 14px;*/
   line-height: 1.6;
   margin-bottom: 17px;
   list-style-position: inside;
