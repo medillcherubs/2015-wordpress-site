@@ -1,5 +1,21 @@
 <?php
 
+// CONFIGURATION
+
+// the four categories that appear on the homepage
+global $cherubs_config;
+
+$cherubs_config = array(
+  "homepage_teaser_category_slugs" => array("academics", "campus", "city", "experiences"),
+  "homepage_teaser_category_slug" => "homepage-section-teaser"
+);
+
+// $homepage_teaser_category_slugs
+// $homepage_teaser_category_slugs = array("academics", "campus", "city", "experiences");
+
+// the category that makes posts appear in the homepage teaser slots
+// $homepage_teaser_category_slug = array("homepage-section-teaser");
+
 // ADD MENU SUPPORT
 add_theme_support( 'menus' );
 add_action('init', 'register_my_menus');
@@ -29,6 +45,23 @@ add_filter('wp_nav_menu_items','menu_search', 10, 2);
 
 function get_profile_image_path() {
   return "http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/";
+}
+
+// main section categories, such as academics, etc.
+function get_homepage_teaser_categories() {
+  global $cherubs_config;
+  $ids = [];
+  foreach ($cherubs_config["homepage_teaser_category_slugs"] as $slug) {
+    $category = get_category_by_slug($slug);
+    array_push($ids, $category->term_id);
+  }
+  return $ids;
+}
+
+function get_homepage_teaser_category_id() {
+  global $cherubs_config;
+  $category = get_category_by_slug($cherubs_config["homepage_teaser_category_slug"]);
+  return $category->term_id;
 }
 
 function stories_by() {

@@ -33,28 +33,27 @@ Template Name: Homepage
 
         <div class="row">
 
-          <?php $categories = array(4,5,76, 72); ?>
+          <?php $categories = get_homepage_teaser_categories(); ?>
+
 
           <?php foreach ($categories as $category_id) : ?>
 
-            <?php $my_query = new WP_Query(array( 'posts_per_page' => 1,'category__and' => array($category_id, 9) ) );
+            <?php $my_query = new WP_Query(array( 'posts_per_page' => 1,'category__and' => array($category_id, get_homepage_teaser_category_id()) ) );
               while ($my_query->have_posts()) : $my_query->the_post();
               $do_not_duplicate = $post->ID;?>
 
-              <div class="three columns hp-tease">
+              <div class="large-3 columns">
 
-                <h4 class="category-hp"><a href="<?php echo get_category_link($category_id) ?>"><?php echo get_cat_name($category_id); ?></h4>
+                <h4 class="homepage-teaser-category"><a href="<?php echo get_category_link($category_id) ?>"><?php echo get_cat_name($category_id); ?></h4>
 
                 <a href="<?php echo get_permalink(); ?>">
-                  <div class="tease-image">
+                  <div class="homepage-teaser-image">
                     <?php the_post_thumbnail( 'homepage-thumbnail', $attr ); ?>
                   </div>
 
-                  <h4 class="tease-headline"><?php the_title(); ?></h4>
+                  <h4 class="homepage-teaser-headline"><?php the_title(); ?></h4>
 
-                  <!-- <div class="tease-authors">By <?php coauthors(); ?></div> -->
-
-                  <div class="tease-text"><?php the_excerpt(); ?></div>
+                  <div class="homepage-teaser-excerpt"><?php the_excerpt(); ?></div>
                 </a>
 
               </div>

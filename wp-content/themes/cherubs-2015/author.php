@@ -82,7 +82,7 @@
 
         <h3 class="profile-section-title">Stories by <?php echo get_the_author_meta("first_name") ?></h3>
 
-        <ul>
+        <ul class="profile-links">
           <?php while (have_posts()) : the_post(); ?>
             <li class="archive-entry">
               <h4><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
