@@ -32,7 +32,7 @@ All files are in `wp-content/themes/cherubs-2015`:
 
 ### Top Menu
 
-In `Appearance > Menus`, add a menu called `Top Navigation`. Add pages and categories there.
+In `Appearance > Menus`, add a menu called `Top Navigation`. Add pages and categories there. Under `Theme Locations`, check `Header Menu`.
 
 Theme must add menu support in `functions.php`.
 
