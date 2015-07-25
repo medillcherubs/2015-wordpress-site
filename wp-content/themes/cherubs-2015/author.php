@@ -29,14 +29,13 @@
 
 </div> <!-- profile header -->
 
+<div>
 
-<div id="content" class="clearfix">
-
-  <div class="six columns clearfix">
+  <div class="large-6 columns">
     <img class="profile-picture" src="<?php echo get_profile_image_path() . $photoslug; ?>.jpg" />
   </div>
 
-  <div id="main" class="six columns clearfix" role="main">
+  <div class="large-6 columns">
 
     <div class="profile-section">
       <h3 class="profile-section-title">Bio</h3>
@@ -85,9 +84,7 @@
 
     <?php endif; ?>
 
-  </div> <!-- end #main -->
-
-  <div class="one columns"></div>
+  </div> <!-- end author info -->
 
 </div> <!-- end #content -->
 
