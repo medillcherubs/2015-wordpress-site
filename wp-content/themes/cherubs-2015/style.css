@@ -319,12 +319,6 @@ body .author > div {
   margin-bottom: 20px;
 }
 
-
-/* temporary until we can get rid of it */
-.footer-navigation-menu .search-input {
-  display: none;
-}
-
 /* PROFILE PAGES */
 
 .profile-title {
