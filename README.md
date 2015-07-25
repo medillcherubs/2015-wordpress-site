@@ -59,3 +59,7 @@ The target PHP version is 5.4.24. There is no FTP access.
 ### Categories
 
 * slug: full-width
+
+### Plugins
+
+* "Related" by Marcel Pol
