@@ -15,7 +15,7 @@ Template Name: Homepage
         <?php
           global $post;
           $tmp_post = $post;
-          $args = array( 'numberposts' => 1, 'category' => "homepage-video", 'post_status' => 'any' );
+          $args = array( 'numberposts' => 1, 'category_name' => "homepage-video", 'post_status' => 'any' );
           $myposts = get_posts( $args );
           foreach( $myposts as $post ) :  setup_postdata($post);
         ?>
