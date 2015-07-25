@@ -319,7 +319,7 @@ body .author > div {
   margin-bottom: 20px;
 }
 
-.full-width .wp-caption:nth-child(n+2){
+.wp-caption:nth-child(n+2){
   max-width: 545px;
   width: 100%;
 }
