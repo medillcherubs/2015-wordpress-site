@@ -25,10 +25,6 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 
-body a {
-  color: #412C67;
-}
-
 .logo-header {
   text-align: center;
   max-width: 420px;
@@ -222,7 +218,7 @@ article p {
     padding: 0px;
   }
 
-  .author {
+  body .author {
     float: left;
     max-width: 100%;
     margin: 0 20px 10px 0;
@@ -234,13 +230,13 @@ article p {
   margin: 0;
 }
 
-.author {
+body .author {
   float: left;
   max-width: 200px;
   margin: 0 20px 10px 0;
 }
 
-.author > div {
+body .author > div {
   float: left;
 }
 
@@ -286,7 +282,20 @@ article p {
   margin: 4px 0 20px 0;
 }
 
-<<<<<<< HEAD
+.related_content {
+  border-top: 1px solid #ddd;
+  padding: 15px 0 0 0;
+}
+
+.related_content .widget-title {
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.related-posts {
+  font-size: 0.9em;
+}
+
 .full-width .main-content {
   max-width: none;
   float: none;

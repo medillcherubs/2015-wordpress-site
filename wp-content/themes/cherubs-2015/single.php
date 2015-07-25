@@ -43,12 +43,6 @@
 					</div>
 
 				</section>
-				
-				<footer>
-					
-					<?php related_stories(get_post_meta($post->ID, "related_stories")); ?>
-										
-				</footer>
 			
 			</article>
 
