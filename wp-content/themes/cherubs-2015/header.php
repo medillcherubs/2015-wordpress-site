@@ -42,7 +42,7 @@
       <!-- MAIN LOGO -->
       <header role="banner" class="logo-header">
         <a class="logo" href="<?php echo get_bloginfo('url'); ?>">
-          <img src="<?php echo get_template_directory_uri() . "/images/logo-small.png" ?> " alt="">
+          <img src="<?php echo get_template_directory_uri() . "/images/logo.png" ?> " alt="">
         </a>
       </header>
 
