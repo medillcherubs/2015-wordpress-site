@@ -7,7 +7,8 @@ function register_my_menus(){
   register_nav_menus(
     array(
       'header-menu' => 'Header Menu',
-      'footer-menu' => 'Footer Menu'
+      'footer-menu' => 'Footer Menu',
+      'homepage-teaser' => 'Homepage Teaser'
     )
   );
 }

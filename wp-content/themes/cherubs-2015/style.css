@@ -251,3 +251,27 @@ ul, ol {
   line-height: 1.3;
   margin: 6px 0;
 }
+
+.homepage-featured {
+  margin-top: 2em;
+}
+
+.homepage-title {
+  font-size: 26px;
+  line-height: 1.2;
+  margin-top: 0;
+  color: #000;
+  font-weight: 600;
+}
+
+.homepage-description {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+/* homepage Vimeo player */
+.homepage-video iframe {
+  width: 100%;
+}
