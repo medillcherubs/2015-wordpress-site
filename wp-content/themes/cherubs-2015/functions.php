@@ -7,7 +7,8 @@ function register_my_menus(){
   register_nav_menus(
     array(
       'header-menu' => 'Header Menu',
-      'footer-menu' => 'Footer Menu'
+      'footer-menu' => 'Footer Menu',
+      'homepage-teaser' => 'Homepage Teaser'
     )
   );
 }
@@ -38,13 +39,15 @@ function related_stories($related_stories){
 
 }
 
-function menu_search($items){
+function menu_search($items, $args){
+  $search = "";
+  if ($args->menu_class === "top-menu") {
     $search = '<li class="menu-item search-input"><img id="search-img" src="http://cherubs.medill.northwestern.edu/wp-content/uploads/2014/07/magnifying_glass1.png"> <form class="search-form" action="http://cherubs.medill.northwestern.edu/2015/" method="get"><input type="text" class="search" placeholder="Search" name="s" value="" class="placeholder"></form></li>';
-
-    return $items . $search;
+  }
+  return $items . $search;
 }
 
-add_filter('wp_nav_menu_items','menu_search');
+add_filter('wp_nav_menu_items','menu_search', 10, 2);
 
 function get_profile_image_path() {
   return "http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/";
@@ -52,9 +55,9 @@ function get_profile_image_path() {
 
 function stories_by() {
 
-  $last_names = get_the_coauthor_meta("last_name"); 
-	$user_logins = get_the_coauthor_meta("user_login"); 
-	$first_names = get_the_coauthor_meta("first_name"); 
+  $last_names = get_the_coauthor_meta("last_name");
+	$user_logins = get_the_coauthor_meta("user_login");
+	$first_names = get_the_coauthor_meta("first_name");
 	$ids = get_the_coauthor_meta("ID");
 
 	$authors = array();
@@ -70,7 +73,7 @@ function stories_by() {
       "id" => $ids[$key]
 		);
 	}
-	
+
 	cherub_authors($authors);
 }
 
@@ -78,14 +81,14 @@ function stories_by() {
 
 <?php function cherub_authors($authors, $type = "Story") { ?>
 
-<?php if ($type == "Story") ?> 
+<?php if ($type == "Story") ?>
 
 <h5 class="small-label stories-by"><?php echo $type; ?> by</h5>
 
-	<ul class="article-authors clearfix"> 
+	<ul class="article-authors clearfix">
 	<?php foreach ($authors as $author) : ?>
-    
-		<li class="author clearfix">	
+
+		<li class="author clearfix">
 			<div class="author-image-container">
 				<!-- <img src="http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/<?php //echo preg_replace('/[\s+\-]/', '', strtolower($author->login)); ?>-150x150.jpg" class="author-image" /> -->
 				<img src="<?php echo $author->image ?>" class="author-image" />
@@ -102,7 +105,7 @@ function stories_by() {
 </ul>
 
 
-<?php 	
-}	
+<?php
+}
 
 ?>

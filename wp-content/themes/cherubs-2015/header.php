@@ -22,8 +22,9 @@
   <![endif]-->
 
   <? // SCRIPTS ?>
-  <?php wp_enqueue_script("jquery-js", get_template_directory_uri() . "/js/jquery-1.11.3.min.js"); ?>
-  <?php wp_enqueue_script("foundation-js", get_template_directory_uri() . "/js/foundation.min.js"); ?>
+  <?php // wp_enqueue_script("jquery-js", get_template_directory_uri() . "/js/jquery-1.11.3.min.js"); ?>
+  <?php // wp_enqueue_script("foundation-js", get_template_directory_uri() . "/js/foundation.min.js"); ?>
+  <?php wp_enqueue_script("cherubs-js", get_template_directory_uri() . "/script.js"); ?>
 
   <? // STYLES ?>
   <?php wp_enqueue_style("foundation-css", get_template_directory_uri() . "/css/foundation.min.css"); ?>
@@ -49,7 +50,7 @@
       <!-- TOP MENU -->
       <?php wp_nav_menu( array(
           "theme_location" => "header-menu",
-          "menu_class" => "navigation-menu"
+          "menu_class" => "top-menu"
         ) ); ?>
 
     </div> <!-- HEADER -->
