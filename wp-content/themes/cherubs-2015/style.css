@@ -199,9 +199,9 @@ article p {
 }
 
 .article-authors-box {
-  max-width: 180px;
+  max-width: 200px;
   width: 100%;
-  float: left;
+  float: right;
   margin: 0 0 0 20px;
   border-top: 1px solid #DDD;
   padding: 5px 5px 0;
@@ -333,6 +333,22 @@ article p {
   background-color: #eee;
   width: 100%;
   margin-bottom: 6px;
+}
+
+@media screen and (max-width: 1012px) {
+  .article-authors-box {
+    float: none;
+    max-width: 100%;
+    margin: 0 0 20px;
+    border-top: none;
+    padding: 0px;
+  }
+
+  .author {
+    float: left;
+    max-width: 100%;
+    margin: 0 20px 10px 0;
+  }
 }
 
 @media screen and (min-width: 400px) {

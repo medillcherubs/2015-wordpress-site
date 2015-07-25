@@ -65,13 +65,14 @@
 
 					<div class="body clearfix">
 
+						<div class="article-authors-box clearfix">
+							<?php stories_by(); ?>
+						</div>
+						
 						<div class="main-content">
 							<?php echo $content; ?>
 						</div>
 
-						<div class="article-authors-box clearfix">
-							<?php stories_by(); ?>
-						</div>
 
 
 					</div>
