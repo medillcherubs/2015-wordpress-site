@@ -202,6 +202,35 @@ input.search {
   font-weight: 300;
 }
 
+/* CLASS OF 2015 */
+
+
+.cherub-box {
+ float: left;
+ width: 150px;
+ margin-bottom: 20px;
+ height: 170px;
+
+}
+
+.cherub-image-box {
+  width: 100%;
+}
+
+.cherub-image {
+  max-width: 100%;
+  background-color: #eee;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+@media screen and (min-width: 400px) {
+   .cherub-box {
+         margin-right: 10px;
+   }
+}
+
+
 /* GLOBAL RULE FOR NOW... */
 
 ul, ol {
