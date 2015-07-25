@@ -53,16 +53,26 @@
     </div>
 
     <?php if (get_the_author_meta( "twitter", $curauth->ID )) : ?>
+      <?php $twitter = get_the_author_meta( "twitter", $curauth->ID ); ?>
       <div class="profile-section">
         <h3 class="profile-section-title">Twitter</h3>
-        <p class="profile-section-body"><?php echo get_the_author_meta( "twitter", $curauth->ID ); ?></p>
+        <p class="profile-section-body">
+          <a href="https://www.twitter.com/<?php echo $twitter; ?>">
+            <?php echo get_the_author_meta( "twitter", $curauth->ID ); ?>
+          </a>
+        </p>
       </div>
     <?php endif; ?>
 
     <?php if (get_the_author_meta( "instagram", $curauth->ID )) : ?>
+      <?php $instagram = get_the_author_meta( "instagram", $curauth->ID ); ?>
       <div class="profile-section">
         <h3 class="profile-section-title">Instagram</h3>
-        <p class="profile-section-body"><?php echo get_the_author_meta( "instagram", $curauth->ID ); ?></p>
+        <p class="profile-section-body">
+          <a href="https://www.instagram.com/<?php echo $instagram; ?>">
+            <?php echo $instagram; ?>
+          </a>
+        </p>
       </div>
     <?php endif; ?>
 

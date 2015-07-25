@@ -24,10 +24,14 @@ class umFormBase {
     protected $found;
     
     /**
-     * @var (array) All shared fields from DB. 
+     * @var (array) All raw shared fields from DB. 
      */
     protected $allFields = array();
     
+    /**
+     * @var (array) All raw forms from DB. 
+     */
+    private $allForms = array();
     
     /**
      * @param (string) $formName
@@ -122,6 +126,18 @@ class umFormBase {
      */
     function getAllFields() {
         return $this->allFields;
+    }
+    
+    /**
+     * Get raw forms from DB.
+     * @return (array)
+     */
+    function getAllForms() {
+        global $userMeta;
+        if ( ! empty( $this->allForms ) ) return $this->allForms;
+        
+        $forms  = $userMeta->getData( 'forms' );
+        return $this->allForms = is_array( $forms ) ? $forms : array();
     }
     
     function getData() {

@@ -147,8 +147,9 @@ class umUserInsert {
             if ( is_array( $userData[ $fieldName ] ) && count( $userData[ $fieldName ] ) == 1 && ! empty( $userData[ $fieldName ] ) )
                 $userData[ $fieldName ] = $userData[ $fieldName ][0];
             
-            if ( $userData[ $fieldName ] && ! is_array( $userData[ $fieldName ] ) )
-                $userData[ $fieldName ] = esc_attr( $userData[ $fieldName ] );
+            // Comment out esc_attr which has been added since 1.1.7rc2. esc_attr causes encodin '<' '>' sign for links on rich text
+            //if ( $userData[ $fieldName ] && ! is_array( $userData[ $fieldName ] ) )
+            //    $userData[ $fieldName ] = esc_attr( $userData[ $fieldName ] );
             
             
             /// Handle non-ajax file upload
@@ -532,23 +533,23 @@ class umUserInsert {
 
         $this->sanitizeFields();
         
-		// If add_user_to_blog set true in UserMeta settings panel
-		if ( is_multisite() && ( $this->actionType == 'registration' ) ) {
-			$registrationSettings = $userMeta->getSettings('registration');
-			if ( ! empty( $registrationSettings['add_user_to_blog'] ) ){
-				if ( $this->errors->get_error_code() ) {
-					$skipMsgs = array( 'existing_user_login', 'existing_user_email', 'validate_unique' );
-					foreach ( $skipMsgs as $skipMsg ) {
-						if ( in_array( $skipMsg, $this->errors->get_error_codes() ) )
-							unset( $this->errors->errors[ $skipMsg ] );
-					}
-				}
-				/*if ( in_array( 'existing_user_login', $this->errors->get_error_codes() ) )
-					unset( $this->errors->errors['existing_user_login'] );
-				if ( in_array( 'existing_user_email', $this->errors->get_error_codes() ) )
-					unset( $this->errors->errors['existing_user_email'] );*/		
-			}				
-		}
+        // If add_user_to_blog set true in UserMeta settings panel
+        if ( is_multisite() && ( $this->actionType == 'registration' ) ) {
+            $registrationSettings = $userMeta->getSettings('registration');
+            if ( ! empty( $registrationSettings['add_user_to_blog'] ) ){
+                if ( $this->errors->get_error_code() ) {
+                        $skipMsgs = array( 'existing_user_login', 'existing_user_email', 'validate_unique' );
+                        foreach ( $skipMsgs as $skipMsg ) {
+                                if ( in_array( $skipMsg, $this->errors->get_error_codes() ) )
+                                        unset( $this->errors->errors[ $skipMsg ] );
+                        }
+                }
+                /*if ( in_array( 'existing_user_login', $this->errors->get_error_codes() ) )
+                        unset( $this->errors->errors['existing_user_login'] );
+                if ( in_array( 'existing_user_email', $this->errors->get_error_codes() ) )
+                        unset( $this->errors->errors['existing_user_email'] );*/		
+            }				
+        }
 			
         if ( empty( $this->userData ) )
             $this->errors->add( 'empty_field_value', __( 'No data to update', $userMeta->name ) );       

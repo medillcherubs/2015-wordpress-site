@@ -178,10 +178,20 @@ class umFormBuilder extends umFormBase {
         if ( ! empty( $config['max_field_id'] ) )
             return (int) $config['max_field_id'];
         
-        if ( ! empty( $this->allFields ) )
-            $id = max( array_keys( $this->allFields ) );
+        $maxs = array();
         
-        return ! empty( $id ) ? $id : 0;
+        if ( ! empty( $this->allFields ) )
+            $maxs[] = max( array_keys( $this->allFields ) );
+        
+        $forms = $this->getAllForms();
+        if ( ! empty( $forms ) && is_array( $forms ) ) {
+            foreach ( $forms as $form ) {
+                if ( ! empty( $form['fields'] ) && is_array( $form['fields'] ) )
+                    $maxs[] = max( array_keys( $form['fields'] ) );    
+            }
+        }
+        
+        return ! empty( $maxs ) ? max( $maxs ) : 0;
     }
     
     function setMaxFieldID( $id = 0 ) {
@@ -198,7 +208,7 @@ class umFormBuilder extends umFormBase {
         $userMeta->updateData( 'config', $config );
     }
     
-    function maxFieldInmput() {
+    function maxFieldInput() {
         $id = $this->getMaxFieldID();
         return '<input type="hidden" name="init_max_id" id="um_init_max_id" value="'. $id .'"/>'
                 . '<input type="hidden" name="max_id" id="um_max_id" value="'. $id .'"/>';

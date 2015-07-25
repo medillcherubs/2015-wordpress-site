@@ -33,12 +33,18 @@
 /**
  * A ReCaptchaResponse is returned from checkAnswer().
  */
+
+if ( ! class_exists( 'ReCaptchaResponse' ) ) :
 class ReCaptchaResponse
 {
     public $success;
     public $errorCodes;
 }
+endif;
 
+
+
+if ( ! class_exists( 'ReCaptcha' ) ) :
 class ReCaptcha
 {
     private static $_signupUrl = "https://www.google.com/recaptcha/admin";
@@ -136,5 +142,4 @@ class ReCaptcha
         return $recaptchaResponse;
     }
 }
-
-?>
+endif;

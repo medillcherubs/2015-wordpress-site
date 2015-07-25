@@ -47,13 +47,12 @@ class umPreloadsController {
         add_action( 'wp_ajax_nopriv_um_show_uploaded_file',     array( $userMeta, 'ajaxShowUploadedFile' ) );
           
         add_action( 'wp_ajax_um_validate_unique_field',         array( $userMeta, 'ajaxValidateUniqueField' ) );
-        add_action( 'wp_ajax_nopriv_um_validate_unique_field',  array( $userMeta, 'ajaxValidateUniqueField' ) );
-        
-        
+        add_action( 'wp_ajax_nopriv_um_validate_unique_field',  array( $userMeta, 'ajaxValidateUniqueField' ) );   
         
         if ( $userMeta->isPro ) {
-            add_action( 'wp', array( $userMeta, 'validateUMPKey' ) );
-            add_action( 'wp_ajax_ump_license_validation',       array( $userMeta, 'validateUMPKey' ) );
+            add_action( 'wp',                                       array( $userMeta, 'validateUMPKey' ) );
+            add_action( 'wp_ajax_ump_license_validation',           array( $userMeta, 'validateUMPKey' ) );
+            add_filter( 'pre_set_site_transient_update_plugins',    array( $userMeta, 'checkForUpdate' ) );
         }
     }
     
@@ -158,7 +157,9 @@ class umPreloadsController {
         $currentPlugin = get_site_transient( 'update_plugins' );
         if ( isset( $currentPlugin->response[ $userMeta->pluginSlug ] ) ) {
             $plugin = $currentPlugin->response[ $userMeta->pluginSlug ];
-            echo '<div class="error"><p>' . sprintf( __( 'There is a new version of %1$s available. <a href="%2$s">update automatically</a>.', $userMeta->name ), "$userMeta->title $plugin->new_version", $userMeta->pluginUpdateUrl() ) .'</p></div>';
+            $path = 'plugins.php#' . str_replace( ' ', '-', strtolower( $userMeta->title ) );
+            $pluginsPage = is_multisite() ? network_admin_url( $path ) : admin_url( $path );
+            echo '<div class="error"><p>' . sprintf( __( 'There is a new version of %1$s available. Visit <a href="%2$s">Plugins</a> page to update the plugin.', $userMeta->name ), "$userMeta->title $plugin->new_version", $pluginsPage ) .'</p></div>';
         }        
     }
     
@@ -292,6 +293,7 @@ class umPreloadsController {
             $userMeta->um_post_method_status->$methodName = $response;
     }
     
+    
     function debug() {
         global $userMeta;
         
@@ -299,9 +301,7 @@ class umPreloadsController {
             phpinfo();
         }
         
-        
         die();
-    }
-           
+    }          
 }
 endif;      
