@@ -8,16 +8,6 @@
     $curauth = get_userdata(get_query_var('author'));
   }
 
-  // prepare location text: "Rahrah High School, Beijing, China"
-  $location = array();
-  $city = get_the_author_meta( 'high_school_city', $curauth->ID );
-  $state = get_the_author_meta( 'high_school_state', $curauth->ID );
-  $country = get_the_author_meta( 'country', $curauth->ID );
-  array_push($location, $city);
-  if ($state) array_push($location, $state);
-  if ($country) array_push($location, $country);
-  $location = join(", ", $location);
-
   // photo slug
   $slugname = preg_replace( '/\s+/', '', strtolower($curauth->display_name) );
   $photoslug = preg_replace('/\-/', '', $slugname);
@@ -30,7 +20,7 @@
     <?php echo $curauth->display_name; ?>
 
     <span>
-      <?php echo $location ?>
+      <?php echo get_the_author_meta( 'hometown', $curauth->ID ) ?>
       <span class="bullet">&#149;</span>
       <?php echo get_the_author_meta( "high_school_name", $curauth->ID ); ?>
     </span>
@@ -54,9 +44,28 @@
     </div>
 
     <div class="profile-section">
-      <h3>Favorite cherub moment</h3>
-      <p><?php echo get_the_author_meta( "cherub_memory", $curauth->ID ); ?></p>
+      <h3>Journalism highlight</h3>
+      <p><?php echo get_the_author_meta( "journalism_highlight", $curauth->ID ); ?></p>
     </div>
+
+    <div class="profile-section">
+      <h3>Favorite cherub moment</h3>
+      <p><?php echo get_the_author_meta( "favorite_cherub_moment", $curauth->ID ); ?></p>
+    </div>
+
+    <?php if (get_the_author_meta( "twitter", $curauth->ID )) : ?>
+      <div class="profile-section">
+        <h3>Twitter</h3>
+        <p><?php echo get_the_author_meta( "twitter", $curauth->ID ); ?></p>
+      </div>
+    <?php endif; ?>
+
+    <?php if (get_the_author_meta( "instagram", $curauth->ID )) : ?>
+      <div class="profile-section">
+        <h3>Instagram</h3>
+        <p><?php echo get_the_author_meta( "instagram", $curauth->ID ); ?></p>
+      </div>
+    <?php endif; ?>
 
     <?php if (have_posts()) : ?>
 
