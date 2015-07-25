@@ -78,6 +78,17 @@ body {
   font-weight: 300;
 }
 
+#menu-footer-nav {
+  float: right;
+}
+
+.footer-navigation-menu .menu-item {
+  color: #222;
+  padding: 0;
+  margin: 0 10px 0 30px;
+  background-color: transparent;
+}
+
 input.search {
   margin: 0;
   height: 20px;
@@ -113,4 +124,9 @@ input.search {
 .search-form {
   margin: 0;
   display: inline-block;
+}
+
+/* temporary until we can get rid of it */
+.footer-navigation-menu .search-input {
+  display: none;
 }
