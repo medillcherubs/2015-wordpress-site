@@ -319,13 +319,7 @@ body .author > div {
   margin-bottom: 20px;
 }
 
-
-/* temporary until we can get rid of it */
-.footer-navigation-menu .search-input {
-  display: none;
-}
-
-/* PROFILE PAGES */
+/* PROFILE PAGES -------------------------------------------------------- */
 
 .profile-title {
   border-bottom: 1px solid #EEE;
@@ -374,7 +368,7 @@ body .author > div {
   list-style-position: inside;
 }
 
-/* CLASS OF 2015 */
+/* CHERUB GRID (CLASS OF 2015) -------------------------------------------------------- */
 
 .cherub-box {
  float: left;
@@ -401,7 +395,6 @@ body .author > div {
    }
 }
 
-
 /* STORY LINKS */
 
 .archive-entry {
@@ -413,6 +406,8 @@ body .author > div {
   line-height: 1.3;
   margin: 6px 0;
 }
+
+/* HOMEPAGE -------------------------------------------------------------- */
 
 .homepage-featured {
   margin-top: 2em;
@@ -450,7 +445,6 @@ body .author > div {
 .homepage-teaser-category a {
   color: #000;
 }
-
 
 .homepage-teaser-headline {
   font-size: 18px;
