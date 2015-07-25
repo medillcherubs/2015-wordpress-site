@@ -163,21 +163,27 @@ input.search {
 
 /* SINGLE POST -------------------------------------------------------------- */
 
-article {
-  padding: 40px 20px;
+.post {
+  padding: 20px 0;
 }
 
-article header {
+@media screen and (min-width: 600px) {
+  .post {
+    padding: 40px 20px;
+  }
+}
+
+.post header {
   margin-bottom: 30px;
 }
 
-article h1 {
+.post h1 {
   font-size: 2em;
   margin: 0 0 2px 0;
   font-weight: 700;
 }
 
-article h2 {
+.post h2 {
   font-weight: 300;
   color: #555;
   font-size: 1.2em;
@@ -189,7 +195,7 @@ article h2 {
   width: 532px;
 }
 
-article p {
+.post p {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #333;
   font-size: 1em;
@@ -222,7 +228,7 @@ article p {
     padding: 0px;
   }
 
-  body .author {
+  body .article-author {
     float: left;
     max-width: 100%;
     margin: 0 20px 10px 0;
@@ -234,13 +240,13 @@ article p {
   margin: 0;
 }
 
-body .author {
+body .article-author {
   float: left;
   max-width: 200px;
   margin: 0 20px 10px 0;
 }
 
-body .author > div {
+body .article-author > div {
   float: left;
 }
 
@@ -313,7 +319,7 @@ body .author > div {
   padding: 10px 0 0 0;
 }
 
-.full-width .author {
+.full-width .article-author {
   float: left;
   max-width: 100%;
   margin: 0 20px 10px 0;
