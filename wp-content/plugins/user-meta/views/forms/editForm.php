@@ -79,7 +79,7 @@ $formBuilder = new umFormBuilder( 'form_editor', $formName );
 
         <div id="um_additional_input" class="um_hidden">
             <?php echo $userMeta->methodName( 'formEditor', true ); ?>
-            <?php echo $formBuilder->maxFieldInmput(); ?>
+            <?php echo $formBuilder->maxFieldInput(); ?>
             <?php echo $formBuilder->additional(); ?>            
         </div>
 

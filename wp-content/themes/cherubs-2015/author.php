@@ -8,16 +8,6 @@
     $curauth = get_userdata(get_query_var('author'));
   }
 
-  // prepare location text: "Rahrah High School, Beijing, China"
-  $location = array();
-  $city = get_the_author_meta( 'high_school_city', $curauth->ID );
-  $state = get_the_author_meta( 'high_school_state', $curauth->ID );
-  $country = get_the_author_meta( 'country', $curauth->ID );
-  array_push($location, $city);
-  if ($state) array_push($location, $state);
-  if ($country) array_push($location, $country);
-  $location = join(", ", $location);
-
   // photo slug
   $slugname = preg_replace( '/\s+/', '', strtolower($curauth->display_name) );
   $photoslug = preg_replace('/\-/', '', $slugname);
@@ -25,13 +15,13 @@
 
 <div class="profile-header">
 
-  <h1 class="profile_title h2">
+  <h1 class="profile-title">
 
     <?php echo $curauth->display_name; ?>
 
-    <span>
-      <?php echo $location ?>
-      <span class="bullet">&#149;</span>
+    <span class="profile-location">
+      <?php echo get_the_author_meta( 'hometown', $curauth->ID ) ?>
+      <span class="profile-bullet">&#149;</span>
       <?php echo get_the_author_meta( "high_school_name", $curauth->ID ); ?>
     </span>
 
@@ -39,30 +29,58 @@
 
 </div> <!-- profile header -->
 
+<div>
 
-<div id="content" class="clearfix">
-
-  <div class="six columns clearfix">
+  <div class="large-6 columns">
     <img class="profile-picture" src="<?php echo get_profile_image_path() . $photoslug; ?>.jpg" />
   </div>
 
-  <div id="main" class="six columns clearfix" role="main">
+  <div class="large-6 columns">
 
     <div class="profile-section">
-      <h3>Bio</h3>
-      <p><?php echo get_the_author_meta( "bio", $curauth->ID ); ?></p>
+      <h3 class="profile-section-title">Bio</h3>
+      <p class="profile-section-body"><?php echo get_the_author_meta( "bio", $curauth->ID ); ?></p>
     </div>
 
     <div class="profile-section">
-      <h3>Favorite cherub moment</h3>
-      <p><?php echo get_the_author_meta( "cherub_memory", $curauth->ID ); ?></p>
+      <h3 class="profile-section-title">Journalism highlight</h3>
+      <p class="profile-section-body"><?php echo get_the_author_meta( "journalism_highlight", $curauth->ID ); ?></p>
     </div>
+
+    <div class="profile-section">
+      <h3 class="profile-section-title">Favorite cherub moment</h3>
+      <p class="profile-section-body"><?php echo get_the_author_meta( "favorite_cherub_moment", $curauth->ID ); ?></p>
+    </div>
+
+    <?php if (get_the_author_meta( "twitter", $curauth->ID )) : ?>
+      <?php $twitter = get_the_author_meta( "twitter", $curauth->ID ); ?>
+      <div class="profile-section">
+        <h3 class="profile-section-title">Twitter</h3>
+        <p class="profile-section-body">
+          <a href="https://www.twitter.com/<?php echo $twitter; ?>">
+            <?php echo get_the_author_meta( "twitter", $curauth->ID ); ?>
+          </a>
+        </p>
+      </div>
+    <?php endif; ?>
+
+    <?php if (get_the_author_meta( "instagram", $curauth->ID )) : ?>
+      <?php $instagram = get_the_author_meta( "instagram", $curauth->ID ); ?>
+      <div class="profile-section">
+        <h3 class="profile-section-title">Instagram</h3>
+        <p class="profile-section-body">
+          <a href="https://www.instagram.com/<?php echo $instagram; ?>">
+            <?php echo $instagram; ?>
+          </a>
+        </p>
+      </div>
+    <?php endif; ?>
 
     <?php if (have_posts()) : ?>
 
       <div class="profile-section">
 
-        <h3>Stories by <?php echo get_the_author_meta("first_name") ?></h3>
+        <h3 class="profile-section-title">Stories by <?php echo get_the_author_meta("first_name") ?></h3>
 
         <ul>
           <?php while (have_posts()) : the_post(); ?>
@@ -76,9 +94,7 @@
 
     <?php endif; ?>
 
-  </div> <!-- end #main -->
-
-  <div class="one columns"></div>
+  </div> <!-- end author info -->
 
 </div> <!-- end #content -->
 

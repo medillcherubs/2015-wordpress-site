@@ -38,8 +38,8 @@ $html .= "<form id=\"um_activation_form\" method=\"post\" $formStyle onsubmit=\"
 
 $html .= '<p> '. sprintf( $formMsg, make_clickable( $userMeta->website ) ) . '</p>';
 
-if( !$isPro )
-    $html .= $getLicense = "<a href=\"{$userMeta->website}/registration/\" class=\"button-primary pf_right\">" . __( 'Get License', $userMeta->name ) . '</a>';
+if( ! $isPro )
+    $html .= $getLicense = "<a href=\"{$userMeta->website}/faq/\" class=\"button-primary pf_right\">" . __( 'FAQ / Help', $userMeta->name ) . '</a>';
 
 $html .= $userMeta->createInput( 'account_email', 'text', array(
     'id'            => 'account_email',
@@ -103,4 +103,3 @@ $html .= '</script>' . "\n\r";
 
 
 echo $userMeta->metaBox( __( 'User Meta Pro Account Information', $userMeta->name ), $html );
-?>

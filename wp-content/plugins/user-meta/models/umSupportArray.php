@@ -18,6 +18,7 @@ class umSupportArray {
         );
     }
     
+    
     function adminPages() {
         global $userMeta;
 
@@ -78,6 +79,7 @@ class umSupportArray {
         
         return $pages;
     }
+    
     
     function hooksList() {
         return array(          
@@ -164,6 +166,7 @@ class umSupportArray {
             return true;
         return false;
     }
+    
     
     function enqueueScripts( $scripts=array() ) {
         global $userMeta;
@@ -628,7 +631,7 @@ class umSupportArray {
         if ( empty( $userMetaCache->localizedStrings ) ) {                  
             $userMetaCache->localizedStrings = array(
                 'user-meta' => array(
-                    'get_pro_link'=> sprintf( __( 'Get pro version from %s to use this feature.', $userMeta->name ), $userMeta->website ),
+                    'get_pro_link'=> $userMeta->isPro ? 'Please validate your license to use this feature.' : "Get pro version from {$userMeta->website} to use this feature.",
                     'please_wait'=> __( 'Please Wait...', $userMeta->name ),
                 ),
                 'fileuploader' => array(

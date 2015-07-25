@@ -55,4 +55,4 @@
     </div> <!-- HEADER -->
 
     <!-- CONTENT -->
-    <div class="content twelve columns">
+    <div class="content large-12 columns">

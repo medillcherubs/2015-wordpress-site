@@ -13,6 +13,7 @@ class umSupportHtml {
         return $html;
     }
     
+    
     function boxGetPro() {
         global $userMeta;
         
@@ -39,6 +40,7 @@ class umSupportHtml {
         return $html;
     }    
     
+    
     function boxShortcodesDocs() {
         global $userMeta;
         
@@ -59,6 +61,7 @@ class umSupportHtml {
         return $html;        
     }
     
+    
     function boxTips() {
         global $userMeta;
         
@@ -67,6 +70,7 @@ class umSupportHtml {
         return $html; 
     }
     
+    
     function getProLink( $label=null ) {
         global $userMeta;
         
@@ -74,15 +78,21 @@ class umSupportHtml {
         return "<a href=\"{$userMeta->website}\">$label</a>";
     }    
     
+    
     function proDemoImage( $img = null ) {
         global $userMeta;
         
-        $html = "<p style=\"color:red\"><strong>This feature is only supported in Pro version. Get <a href=\"{$userMeta->website}\">User Meta Pro</a></strong></p>";
+        if ( $userMeta->isPro )
+            $html = "<p style=\"color:red\"><strong>Please validate your license to use this feature.</strong></p>";
+        else 
+            $html = "<p style=\"color:red\"><strong>This feature is only supported in Pro version. Get <a href=\"{$userMeta->website}\">User Meta Pro</a></strong></p>";
+        
         if ( $img )
             $html .= "<img src=\"https://s3.amazonaws.com/user-meta/public/plugin/images/{$img}?ver={$userMeta->version}\" width=\"100%\" onclick=\"umGetProMessage(this)\" />";
             
         return $html;
     }
+    
     
     function showInfo( $data, $title = '', $icon = true ) {
         $iconHtml = "<span style=\"display: inline-block;\" class=\"ui-icon ui-icon-info\"></span>";
@@ -94,6 +104,7 @@ class umSupportHtml {
 
         return "<p data-ot='$data' class='my-element' >$title</p>";
     }
+    
     
     function buildPanel( $title, $body ) {
         ?>
@@ -111,8 +122,8 @@ class umSupportHtml {
         <?php
     }
     
+    
     function buildTabs( $name = null, $tabs = array() ) { 
-        
         $li = null;
         $tabContent = null;
         $active = 'active';
