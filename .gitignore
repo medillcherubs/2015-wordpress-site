@@ -5,7 +5,7 @@ wp-content/upgrade
 wp-content/themes/twentyfifteen
 wp-content/themes/index.php
 wp-content/index.php
-wp*.php
+/wp*.php
 /index.php
 xmlrpc.php
 license.txt

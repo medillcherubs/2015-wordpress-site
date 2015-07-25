@@ -88,35 +88,39 @@ function stories_by() {
 	cherub_authors($authors);
 }
 
-?>
+function cherub_authors($authors, $type = "Story") {
 
-<?php function cherub_authors($authors, $type = "Story") { ?>
+  $html = "";
 
-<?php if ($type == "Story") ?>
+  if ($type == "Story") :
 
-<h5 class="small-label stories-by"><?php echo $type; ?> by</h5>
+    $html .= "<h5 class='small-label stories-by'> $type by</h5>";
 
-	<ul class="article-authors clearfix">
-	<?php foreach ($authors as $author) : ?>
+    $html .= "<ul class='article-authors clearfix'>";
 
-		<li class="author clearfix">
-			<div class="author-image-container">
-				<!-- <img src="http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/<?php //echo preg_replace('/[\s+\-]/', '', strtolower($author->login)); ?>-150x150.jpg" class="author-image" /> -->
-				<img src="<?php echo $author->image ?>" class="author-image" />
+      foreach ($authors as $author) :
 
-			</div>
-			<div class="author-info">
-        <?php $url = get_author_posts_url( $author->id ); ?>
-				<p class="author-name">
-          <a href="<?php echo $url ?>"><?php echo $author->name; ?></a>
-        </p>
-			</div>
-		</li>
-	<?php endforeach; ?>
-</ul>
+    		$html .= "<li class='author clearfix'>";
+    			$html .= "<div class='author-image-container'>";
+    				$html .= "<!-- <img src='http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/<?php //echo preg_replace('/[\s+\-]/', '', strtolower($author->login)); ?>-150x150.jpg' class='author-image' /> -->";
+    				$html .= "<img src='<?php echo $author->image ?>' class='author-image' />";
 
+    			$html .= "</div>";
+    			$html .= "<div class='author-info'>";
+            $url = get_author_posts_url( $author->id );
+    				$html .= "<p class='author-name'>";
+              $html .= "<a href='$url'>" . $author->name . "</a>";
+            $html .= "</p>";
+    			$html .= "</div>";
+    		$html .= "</li>";
+    	endforeach;
 
-<?php
+    $html .= "</ul>";
+
+  echo $html;
+
+  endif;
+
 }
 
 ?>

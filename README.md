@@ -59,6 +59,12 @@ The target PHP version is 5.4.24. There is no FTP access.
 ### Categories
 
 * slug: full-width
+* slug: academics
+* slug: campus
+* slug: city
+* slug: experiences
+* slug: homepage-section-teaser
+* slug: homepage-video
 
 ### Plugins
 
