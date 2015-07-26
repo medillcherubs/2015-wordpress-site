@@ -68,5 +68,11 @@ The target PHP version is 5.4.24. There is no FTP access.
 
 ### Plugins
 
+* "Co-Authors Plus" by Mohammad Jangda, Daniel Bachhuber, Automattic
+* "Import users from CSV with meta" by codection
+* "Prime Strategy Page Navi" by Hitoshi Omagari
+* "Raw HTML" by Janis Elsts
 * "Related" by Marcel Pol
-* Prime Strategy Page Navi 1.0.3
+* "Slideshow" by StefanBoonstra
+* "User Meta Pro" by Khaled Hossain
+* "WP Subtitle" by Husani Oakley, Ben Huson
