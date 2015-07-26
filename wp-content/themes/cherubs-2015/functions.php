@@ -115,37 +115,54 @@ function stories_by() {
 	cherub_authors($authors);
 }
 
+function alsoby($type, $authors) {
+
+  $data = array();
+  foreach ($authors as $author) {
+    $item = get_user_by('login', $author);
+    $item->state = $item->juiz_state;
+    $item->city = $item->juiz_city;
+    $item->country = $item->juiz_country;
+    $item->nickname = $item->display_name;
+    $item->login = $author;
+    $item->name = $item->display_name;
+    $data[] = $item;
+  }
+
+  cherub_authors($data, $type);
+
+}
+
+
 function cherub_authors($authors, $type = "Story") {
 
   $html = "";
 
-  if ($type == "Story") :
 
-    $html .= "<h5 class='small-label stories-by'> $type by</h5>";
+  $html .= "<h5 class='small-label stories-by'> $type by</h5>";
 
-    $html .= "<ul class='article-authors clearfix'>";
+  $html .= "<ul class='article-authors clearfix'>";
 
-      foreach ($authors as $author) :
+    foreach ($authors as $author) :
 
-    		$html .= "<li class='article-author clearfix'>";
-    			$html .= "<div class='author-image-container'>";
-    				$html .= "<!-- <img src='http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/" . preg_replace('/[\s+\-]/', '', strtolower($author->login)) . "-150x150.jpg' class='author-image' /> -->";
-    				$html .= "<img src='" . $author->image . "' class='author-image' />";
-    			$html .= "</div>";
-    			$html .= "<div class='author-info'>";
-            $url = get_author_posts_url( $author->id );
-    				$html .= "<div class='author-name'>";
-              $html .= "<a href='$url'>" . $author->name . "</a>";
-            $html .= "</div>";
-    			$html .= "</div>";
-    		$html .= "</li>";
-    	endforeach;
+  		$html .= "<li class='article-author clearfix'>";
+  			$html .= "<div class='author-image-container'>";
+  				$html .= "<!-- <img src='http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/" . preg_replace('/[\s+\-]/', '', strtolower($author->login)) . "-150x150.jpg' class='author-image' /> -->";
+  				$html .= "<img src='" . $author->image . "' class='author-image' />";
+  			$html .= "</div>";
+  			$html .= "<div class='author-info'>";
+          $url = get_author_posts_url( $author->id );
+  				$html .= "<div class='author-name'>";
+            $html .= "<a href='$url'>" . $author->name . "</a>";
+          $html .= "</div>";
+  			$html .= "</div>";
+  		$html .= "</li>";
+  	endforeach;
 
-    $html .= "</ul>";
+  $html .= "</ul>";
 
   echo $html;
 
-  endif;
 
 }
 
