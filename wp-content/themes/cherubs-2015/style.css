@@ -292,6 +292,12 @@ body .article-author > div {
   margin: 4px 0 20px 0;
 }
 
+.slideshow_container_style-dark .slideshow_description_box div.slideshow_title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px !important;
+  padding: 8px;
+}
+
 .related_content {
   border-top: 1px solid #ddd;
   padding: 15px 0 0 0;
@@ -332,6 +338,24 @@ body .article-author > div {
 .wp-caption:nth-child(n+2){
   max-width: 545px;
   width: 100%;
+}
+
+.main-content .slideshow_container_style-dark .slideshow_pagination {
+  bottom: -12px;
+}
+
+.slideshow_container .slideshow_pagination .slideshow_pagination_center ul li {
+  display: inline;
+  float: left;
+  background: none;
+  width: 7px;
+  height: 7px;
+  background-color: #000;
+  border-radius: 8px;
+}
+
+.main-content .slideshow_container_style-dark {
+  margin: 0 0 50px 0;
 }
 
 /* PROFILE PAGES -------------------------------------------------------- */
