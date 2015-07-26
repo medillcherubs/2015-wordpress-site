@@ -49,6 +49,18 @@
 						<?php if ($full_width_post) { ?>
 						<div class="article-authors-box clearfix">
 							<?php stories_by(); ?>
+							<?php
+								$mediums = get_post_meta($post->ID, "alsoby");
+
+								if ($mediums) {
+									foreach ($mediums as $medium) {
+
+										$pieces = split(":", $medium);
+										$authors = split(",", $pieces[1]);
+										alsoby($pieces[0], $authors);
+									}
+								}
+							?>
 						</div>
 						<?php } ?>
 
