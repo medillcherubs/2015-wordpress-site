@@ -7,7 +7,14 @@ global $cherubs_config;
 
 $cherubs_config = array(
   "homepage_teaser_category_slugs" => array("academics", "campus", "city", "experiences"),
-  "homepage_teaser_category_slug" => "homepage-section-teaser"
+  "homepage_teaser_category_slug" => "homepage-section-teaser",
+  "section_category_slugs" => array(
+    "academics" => array("guest-speakers", "learning"),
+    "campus" => array(),
+    "city" => array(),
+    "experiences" => array()
+  ),
+  "section_featured_slug" => "featured-story"
 );
 
 // $homepage_teaser_category_slugs
@@ -61,6 +68,26 @@ function get_homepage_teaser_categories() {
 function get_homepage_teaser_category_id() {
   global $cherubs_config;
   $category = get_category_by_slug($cherubs_config["homepage_teaser_category_slug"]);
+  return $category->term_id;
+}
+
+function get_section_categories() {
+  global $cherubs_config;
+  $section_category_ids = array();
+  foreach ($cherubs_config["section_category_slugs"] as $slug => $subcategories) {
+    $primary_category = get_category_by_slug($slug);
+    $section_category_ids[$primary_category->term_id] = array();
+    foreach($subcategories as $subcategory) {
+      $category = get_category_by_slug($subcategory);
+      array_push($section_category_ids[$primary_category->term_id], $category->term_id);
+    }
+  }
+  return $section_category_ids;
+}
+
+function get_section_featured_id() {
+  global $cherubs_config;
+  $category = get_category_by_slug($cherubs_config["section_featured_slug"]);
   return $category->term_id;
 }
 
