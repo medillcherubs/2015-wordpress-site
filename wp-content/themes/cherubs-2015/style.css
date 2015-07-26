@@ -279,13 +279,13 @@ body .article-author > div {
 
 .wp-caption {
   width: 100% !important;
-}
+} 
 
 .wp-caption img {
   width: 100% !important;
 }
 
-.wp-caption-text {
+.post .wp-caption-text {
   color: #888;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;

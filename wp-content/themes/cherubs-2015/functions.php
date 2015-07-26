@@ -9,10 +9,10 @@ $cherubs_config = array(
   "homepage_teaser_category_slugs" => array("academics", "campus", "city", "experiences"),
   "homepage_teaser_category_slug" => "homepage-section-teaser",
   "section_category_slugs" => array(
-    "academics" => array("guest-speakers", "learning"),
-    "campus" => array(),
-    "city" => array(),
-    "experiences" => array()
+    "academics" => array("program-overview", "learning", "guest-speakers", "reporting-and-editing"),
+    "campus" => array("residential-life", "exploring-campus"),
+    "city" => array("living-in-evanston", "going-to-chicago"),
+    "experiences" => array("journalism-reflections", "personal-insight")
   ),
   "section_featured_slug" => "featured-story"
 );
