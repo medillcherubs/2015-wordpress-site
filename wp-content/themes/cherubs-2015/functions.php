@@ -7,7 +7,14 @@ global $cherubs_config;
 
 $cherubs_config = array(
   "homepage_teaser_category_slugs" => array("academics", "campus", "city", "experiences"),
-  "homepage_teaser_category_slug" => "homepage-section-teaser"
+  "homepage_teaser_category_slug" => "homepage-section-teaser",
+  "section_category_slugs" => array(
+    "academics" => array("guest-speakers", "learning"),
+    "campus" => array(),
+    "city" => array(),
+    "experiences" => array()
+  ),
+  "section_featured_slug" => "featured-story"
 );
 
 // $homepage_teaser_category_slugs
@@ -72,6 +79,26 @@ function get_homepage_teaser_category_id() {
   return $category->term_id;
 }
 
+function get_section_categories() {
+  global $cherubs_config;
+  $section_category_ids = array();
+  foreach ($cherubs_config["section_category_slugs"] as $slug => $subcategories) {
+    $primary_category = get_category_by_slug($slug);
+    $section_category_ids[$primary_category->term_id] = array();
+    foreach($subcategories as $subcategory) {
+      $category = get_category_by_slug($subcategory);
+      array_push($section_category_ids[$primary_category->term_id], $category->term_id);
+    }
+  }
+  return $section_category_ids;
+}
+
+function get_section_featured_id() {
+  global $cherubs_config;
+  $category = get_category_by_slug($cherubs_config["section_featured_slug"]);
+  return $category->term_id;
+}
+
 function stories_by() {
 
   $last_names = get_the_coauthor_meta("last_name");
@@ -96,37 +123,54 @@ function stories_by() {
 	cherub_authors($authors);
 }
 
+function alsoby($type, $authors) {
+
+  $data = array();
+  foreach ($authors as $author) {
+    $item = get_user_by('login', $author);
+    $item->state = $item->juiz_state;
+    $item->city = $item->juiz_city;
+    $item->country = $item->juiz_country;
+    $item->nickname = $item->display_name;
+    $item->login = $author;
+    $item->name = $item->display_name;
+    $data[] = $item;
+  }
+
+  cherub_authors($data, $type);
+
+}
+
+
 function cherub_authors($authors, $type = "Story") {
 
   $html = "";
 
-  if ($type == "Story") :
 
-    $html .= "<h5 class='small-label stories-by'> $type by</h5>";
+  $html .= "<h5 class='small-label stories-by'> $type by</h5>";
 
-    $html .= "<ul class='article-authors clearfix'>";
+  $html .= "<ul class='article-authors clearfix'>";
 
-      foreach ($authors as $author) :
+    foreach ($authors as $author) :
 
-    		$html .= "<li class='article-author clearfix'>";
-    			$html .= "<div class='author-image-container'>";
-    				$html .= "<!-- <img src='http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/" . preg_replace('/[\s+\-]/', '', strtolower($author->login)) . "-150x150.jpg' class='author-image' /> -->";
-    				$html .= "<img src='" . $author->image . "' class='author-image' />";
-    			$html .= "</div>";
-    			$html .= "<div class='author-info'>";
-            $url = get_author_posts_url( $author->id );
-    				$html .= "<div class='author-name'>";
-              $html .= "<a href='$url'>" . $author->name . "</a>";
-            $html .= "</div>";
-    			$html .= "</div>";
-    		$html .= "</li>";
-    	endforeach;
+  		$html .= "<li class='article-author clearfix'>";
+  			$html .= "<div class='author-image-container'>";
+  				$html .= "<!-- <img src='http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/" . preg_replace('/[\s+\-]/', '', strtolower($author->login)) . "-150x150.jpg' class='author-image' /> -->";
+  				$html .= "<img src='" . $author->image . "' class='author-image' />";
+  			$html .= "</div>";
+  			$html .= "<div class='author-info'>";
+          $url = get_author_posts_url( $author->id );
+  				$html .= "<div class='author-name'>";
+            $html .= "<a href='$url'>" . $author->name . "</a>";
+          $html .= "</div>";
+  			$html .= "</div>";
+  		$html .= "</li>";
+  	endforeach;
 
-    $html .= "</ul>";
+  $html .= "</ul>";
 
   echo $html;
 
-  endif;
 
 }
 
