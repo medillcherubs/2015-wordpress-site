@@ -498,3 +498,103 @@ body .article-author > div {
 .homepage-teaser-excerpt p {
   color: #444; font-size: 14px;
 }
+
+/* SEARCH RESULTS PAGES -------------------------------------------------------- */
+
+.search-results #content h1 {
+  font-size: 36px;
+  margin-top: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EEE;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.search-results #main {
+  max-width: 545px;
+  width: 100%;
+}
+
+.search-results .search-result {
+  border-bottom: 1px solid #EEE;
+  padding: 20px 0;
+}
+
+.search-results header {
+  margin-bottom: 0px;
+}
+
+.search-results h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0px 0 10px 0;
+}
+
+.search-results .post p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 0;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul.page_navi {
+  display: block;
+  height: 24px;
+  margin-left: -5px;
+  list-style-position: inside;
+}
+
+ul.page_navi .first, ul.page_navi .last {
+  display: none;
+}
+
+ul.page_navi li {
+  float: left;
+  display: block;
+  height: 24px;
+  color: #999;
+  font-size: 14px;
+  margin-left: 5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul.page_navi li a {
+  display: block;
+  padding: 1px 7px 1px;
+  color: #555;
+}
+
+ul.page_navi li.current span {
+  background: #2BA6CB;
+  color: #FFF;
+  font-weight: bold;
+  cursor: default;
+  display: block;
+  padding: 1px 7px 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

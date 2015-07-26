@@ -69,3 +69,4 @@ The target PHP version is 5.4.24. There is no FTP access.
 ### Plugins
 
 * "Related" by Marcel Pol
+* Prime Strategy Page Navi 1.0.3

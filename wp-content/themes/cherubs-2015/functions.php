@@ -41,6 +41,14 @@ function menu_search($items, $args){
   return $items . $search;
 }
 
+function results_threshold($NumResults){
+	return $NumResults > 11;
+}
+
+function nav_params(){
+	return array("next_label" => "Next →", "first_label" => "", "last_label" => "", "prev_label" => "← Previous");
+}
+
 add_filter('wp_nav_menu_items','menu_search', 10, 2);
 
 function get_profile_image_path() {
