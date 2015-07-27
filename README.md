@@ -134,6 +134,8 @@ SSH (password in the Google Doc):
 
 ```
 ssh cherubadmin@ps447908.dreamhostps.com
+OR
+ssh cherubadmin@cherubs2015.org
 ```
 
 Add your public key to:
