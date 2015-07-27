@@ -101,7 +101,7 @@ Top Navigation (theme location: Header Menu)
 * Contact
 * Apply
 
-Footer Navigation (theme location: Footer Menu)
+Footer Nav (theme location: Footer Menu)
 * Twitter (https://twitter.com/medillcherubs)
 * Class of 2015
 * 2014 Site (https://cherubs.medill.northwestern.edu/2014)
