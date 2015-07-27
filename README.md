@@ -29,20 +29,6 @@ All files are in `wp-content/themes/cherubs-2015`:
 * `style.css` — Main stylesheet
 * `header.php` — Add CSS `link` and JS `script` tags here
 
-## Pages and Page Templates
-
-Some pages have custom layouts, like the grid of all cherubs. When you create a page in Wordpress, set the Page Template (on the [right side of Edit Page](https://cloud.githubusercontent.com/assets/333527/8890884/22107e04-32d7-11e5-912f-f190873d1354.png)) to the correct file:
-
-* Class of 2015 — Class of 2015 (`page-class-of-2015.php`)
-
-## Theme Customization
-
-### Top Menu
-
-In `Appearance > Menus`, add a menu called `Top Navigation`. Add pages and categories there. Under `Theme Locations`, check `Header Menu`.
-
-Theme must add menu support in `functions.php`.
-
 ## Development
 
 View MAMP logs:
