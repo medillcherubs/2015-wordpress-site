@@ -3,7 +3,7 @@ Welcome!
 
 ## Installation
 
-You don't need to use MAMP, but it's probably the easiest way to get PHP, MySQL and Apache running on a Mac.
+You don't need to use MAMP, but it's probably the easiest way:
 
 * [Install MAMP](https://www.mamp.info/en/downloads/)
 * Clone this repo: `git clone git@github.com:medillcherubs/2015-wordpress-site.git`
@@ -15,8 +15,8 @@ You don't need to use MAMP, but it's probably the easiest way to get PHP, MySQL 
   * `php5.5.23_X`
   * `php5.6.7_X`
 * Set the MAMP Document Root to the `2015-wordpress-site` folder.
-* Create a new mySQL table named "wordpress". For example, you can use [SequelPro](http://www.sequelpro.com/) to do this easily.
-* Start the MAMP servers.
+* Create a new mySQL table named "wordpress". You can use [SequelPro](http://www.sequelpro.com/) to do this..
+* Start MAMP.
 * Open http://localhost:8888 and set up Wordpress.
     - Usually using "root" for your username and password will work.
     - View http://localhost:8888/MAMP/ for your MySQL configuration.
@@ -125,7 +125,7 @@ Activate plugins:
 
 Use "Import users from CSV with meta" to add users.
 
-# DreamHost VPS Deployment
+## DreamHost VPS Deployment
 
 When you push to master, the theme will automatically be deployed to master using [Simple PHP Git Deploy](https://github.com/markomarkovic/simple-php-git-deploy).
 
