@@ -84,7 +84,8 @@ The target PHP version is 5.4.24. There is no FTP access.
 * Contact
 * Apply
 * Staff
-* Class of 2015
+* Class of 2015 (template: Class of 2015)
+* Homepage (template: Homepage)
 
 ### Menus
 
