@@ -130,6 +130,9 @@ Homepage Teaser (theme location: Homepage Teaser)
 
 # DreamHost VPS Deployment
 
+When you push to master, the theme will automatically be deployed to master using [Simple PHP Git Deploy](https://github.com/markomarkovic/simple-php-git-deploy).
+
+
 SSH (password in the Google Doc):
 
 ```
