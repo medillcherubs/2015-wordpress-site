@@ -1,4 +1,5 @@
 # Medill Cherubs 2015 Wordpress Theme
+Welcome!
 
 ## Installation
 
