@@ -60,9 +60,12 @@ The target PHP version is 5.4.24. There is no FTP access.
 * Experiences
   * Journalism Reflections
   * Personal Insight
-* Homepage Section Teaser
-* Homepage Video
-* Featured Story
+* Featured Content
+  * Homepage Section Teaser
+  * Homepage Video
+  * Featured Story
+* Post Format
+  * Graphic
 
 ### Pages
 
