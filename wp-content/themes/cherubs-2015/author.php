@@ -52,13 +52,13 @@
       <p class="profile-section-body"><?php echo get_the_author_meta( "Favorite Cherub Moment", $curauth->ID ); ?></p>
     </div>
 
-    <?php if (get_the_author_meta( "twitter", $curauth->ID )) : ?>
-      <?php $twitter = get_the_author_meta( "twitter", $curauth->ID ); ?>
+    <?php if (get_the_author_meta( "Twitter Handle", $curauth->ID )) : ?>
+      <?php $twitter = get_the_author_meta( "Twitter Handle", $curauth->ID ); ?>
       <div class="profile-section">
         <h3 class="profile-section-title">Twitter</h3>
         <p class="profile-section-body">
           <a href="https://www.twitter.com/<?php echo $twitter; ?>">
-            <?php echo get_the_author_meta( "Twitter Handle", $curauth->ID ); ?>
+            <?php echo $twitter; ?>
           </a>
         </p>
       </div>
