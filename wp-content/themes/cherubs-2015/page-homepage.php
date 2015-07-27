@@ -2,6 +2,9 @@
 /*
 Template Name: Homepage
 */
+
+// setup_site();
+
 ?>
 
 <?php get_header(); ?>

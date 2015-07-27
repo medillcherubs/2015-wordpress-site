@@ -621,6 +621,7 @@ ul.page_navi li.current span {
     border-bottom: 1px solid #EEE;
     float: left;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .article-thumbnail {

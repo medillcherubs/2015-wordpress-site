@@ -181,7 +181,36 @@ function cherub_authors($authors, $type = "Story") {
 
   echo $html;
 
-
 }
+
+// DOESN'T WORK — COMPLICATED
+
+function setup_site() {
+  create_category("Academics");
+  create_category("Campus");
+  create_category("City");
+  create_category("Experiences");
+  $featured_content_id = create_category("Featured Content");
+    echo $featured_content_id . "!";
+    print_r($featured_content_id);
+    create_category("Homepage Video", $featured_content_id);
+    create_category("Homepage Section Teaser", $featured_content_id);
+    create_category("Featured Story", $featured_content_id);
+  $templates_id = create_category("Templates");
+    create_category("Full-Width", $templates_id);
+}
+
+function create_category($term, $category_id) {
+  if(!is_term($term, "category")){
+    if ($category_id) {
+      return wp_insert_term($term, "category", array( "parent" => $category_id ));
+    } else {
+      return wp_insert_term($term, "category");
+    }
+  } else {
+    return get_cat_ID($term);
+  }
+}
+
 
 ?>
