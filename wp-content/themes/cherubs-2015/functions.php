@@ -17,11 +17,9 @@ $cherubs_config = array(
   "section_featured_slug" => "featured-story"
 );
 
-// $homepage_teaser_category_slugs
-// $homepage_teaser_category_slugs = array("academics", "campus", "city", "experiences");
+// ADD FEATURED IMAGE SUPPORT
 
-// the category that makes posts appear in the homepage teaser slots
-// $homepage_teaser_category_slug = array("homepage-section-teaser");
+add_theme_support( 'post-thumbnails' );
 
 // ADD MENU SUPPORT
 add_theme_support( 'menus' );
