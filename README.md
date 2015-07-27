@@ -135,6 +135,9 @@ Activate plugins:
 * "User Meta Pro" by Khaled Hossain
 * "WP Subtitle" by Husani Oakley, Ben Huson
 
+### Import Users
+
+Use "Import users from CSV with meta" to add users.
 
 # DreamHost VPS Deployment
 
