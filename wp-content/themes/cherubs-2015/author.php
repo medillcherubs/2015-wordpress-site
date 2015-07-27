@@ -20,9 +20,9 @@
     <?php echo $curauth->display_name; ?>
 
     <span class="profile-location">
-      <?php echo get_the_author_meta( 'hometown', $curauth->ID ) ?>
+      <?php echo get_the_author_meta( 'Hometown', $curauth->ID ) ?>
       <span class="profile-bullet">&#149;</span>
-      <?php echo get_the_author_meta( "high_school_name", $curauth->ID ); ?>
+      <?php echo get_the_author_meta( "School", $curauth->ID ); ?>
     </span>
 
   </h1>
