@@ -114,6 +114,8 @@ Homepage Teaser (theme location: Homepage Teaser)
 
 ### Plugins
 
+Activate plugins:
+
 * "Co-Authors Plus" by Mohammad Jangda, Daniel Bachhuber, Automattic
 * "Import users from CSV with meta" by codection
 * "Prime Strategy Page Navi" by Hitoshi Omagari
