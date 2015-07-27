@@ -73,6 +73,16 @@ The target PHP version is 5.4.24. There is no FTP access.
 * "Prime Strategy Page Navi" by Hitoshi Omagari
 * "Raw HTML" by Janis Elsts
 * "Related" by Marcel Pol
+    - Under `Settings` then `Related Posts`, make sure to check the box for `post` in the first two tabs. On the third tab `Content`, check `Add to content` and change the title shown to `Related Stories` 
 * "Slideshow" by StefanBoonstra
+    - Default Settings you need to change:
+        + Style: Dark
+        + Max width: 675
+        + Proportional relationship: 675:450
+        + Slideshow's height: 450
+        + Hide description box: NO
+        + Automatically slide to the next slide: NO
+        + Hide navigation buttons, show when mouse hovers over: NO
+        + Hide pagination, show when mouse hovers over: NO
 * "User Meta Pro" by Khaled Hossain
 * "WP Subtitle" by Husani Oakley, Ben Huson
