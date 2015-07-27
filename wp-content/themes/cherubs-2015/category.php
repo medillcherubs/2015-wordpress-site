@@ -151,49 +151,6 @@ $categories = $subcategories[$category_id];
 
         </div>
 
-        <div class="four columns tertiary">
-
-          <?php foreach ($tertiary as $tertiary_id) : ?>
-
-              <h4><?php echo get_cat_name($tertiary_id); ?></h4>
-        <?php $my_query = new WP_Query(array( 'posts_per_page' => 1, 'category__and' => array($tertiary_id, 150) ));
-          while ($my_query->have_posts()) : $my_query->the_post();
-          $do_not_duplicate = $post->ID;?>
-          <div class="tertiaryImage">
-            <div class="image">
-              <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail( $size, $attr ); ?></a>
-            </div>
-            <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <?php if (get_the_excerpt()) : ?>
-              <div class="sectCaption">
-                <?php the_excerpt(); ?>
-              </div>
-            <?php endif; ?>
-          </div>
-        <?php endwhile; ?>
-
-        <?php
-          $my_query = new WP_Query(array( 'posts_per_page' => 99, 'cat' => $tertiary_id ));
-          $show_posts = ($my_query->found_posts > 1);
-        ?>
-        <?php if ($show_posts) : ?>
-          <h4 class="more-label">More</h4>
-          <div class="archiveList">
-            <?php while ($my_query->have_posts()) : $my_query->the_post();  ?>
-              <?php if ($do_not_duplicate == $post->ID) continue; ?>
-              <div class="archive-story">
-                <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail( $size, $attr ); ?></a>
-                <?php the_title('<h3 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h3>'); ?>
-              </div>
-              <!-- <a href="<?php echo get_permalink(); ?>"><?php the_excerpt(); ?></a> -->
-            <?php endwhile;  ?>
-          </div>
-        <?php endif; ?>
-
-            <?php endforeach; ?>
-
-        </div>
-
   </div> <!-- end .row -->
 
 </div> <!-- end #content -->
