@@ -133,7 +133,7 @@ function stories_by() {
 
 	foreach ($last_names as $key => $last) {
 		$authors[] = (object) array(
-			"image" => get_profile_image_path() . $last . str_replace(" ", "", $first_names[$key]) . ".png",
+			"image" => get_profile_image_path() . $first_names[$key] . "_" $last . ".png",
 			"last_name" => $last_names[$key],
 			"first_name" => $first_names[$key],
 			"name" => $first_names[$key]." ".$last_names[$key],
