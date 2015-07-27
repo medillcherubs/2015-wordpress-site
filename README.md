@@ -113,7 +113,7 @@ Homepage Teaser (theme location: Homepage Teaser)
 * "Prime Strategy Page Navi" by Hitoshi Omagari
 * "Raw HTML" by Janis Elsts
 * "Related" by Marcel Pol
-    - Under `Settings` then `Related Posts`, make sure to check the box for `post` in the first two tabs. On the third tab `Content`, check `Add to content` and change the title shown to `Related Stories` 
+    - Under `Settings` then `Related Posts`, make sure to check the box for `post` in the first two tabs. On the third tab `Content`, check `Add to content` and change the title shown to `Related Stories`
 * "Slideshow" by StefanBoonstra
     - Default Settings you need to change:
         + Style: Dark
@@ -126,3 +126,18 @@ Homepage Teaser (theme location: Homepage Teaser)
         + Hide pagination, show when mouse hovers over: NO
 * "User Meta Pro" by Khaled Hossain
 * "WP Subtitle" by Husani Oakley, Ben Huson
+
+
+# DreamHost VPS Deployment
+
+SSH (password in the Google Doc):
+
+```
+ssh cherubadmin@ps447908.dreamhostps.com
+```
+
+Add your public key to:
+
+```
+~/.ssh/authorized_keys
+```
