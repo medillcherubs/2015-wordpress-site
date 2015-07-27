@@ -21,9 +21,15 @@ $cherubs_config = array(
 
 add_theme_support( 'post-thumbnails' );
 
+// ADD IMAGE SIZES
+
 add_image_size( 'homepage-thumbnail', 212, 141, true );
 add_image_size( 'section-featured-thumbnail', 635, 424, true );
 add_image_size( 'section-thumbnail', 120, 80, true );
+
+// ADD
+
+add_theme_support( 'post-formats', array( 'gallery', 'audio', 'video', 'image' ) );
 
 // ADD MENU SUPPORT
 add_theme_support( 'menus' );
