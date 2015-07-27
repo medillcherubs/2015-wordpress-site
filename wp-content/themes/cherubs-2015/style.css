@@ -294,6 +294,7 @@ body .article-author > div {
 
 .single-post .main-content iframe {
   width: 100% !important;
+  margin: 0 0 20px 0;
 }
 
 .slideshow_container_style-dark .slideshow_description_box div.slideshow_title {
