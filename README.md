@@ -131,18 +131,3 @@ Use "Import users from CSV with meta" to add users.
 ## DreamHost VPS Deployment
 
 When you push to master, the theme will automatically be deployed to master using [Simple PHP Git Deploy](https://github.com/markomarkovic/simple-php-git-deploy).
-
-
-SSH (password in the Google Doc):
-
-```
-ssh cherubadmin@ps447908.dreamhostps.com
-OR
-ssh cherubadmin@cherubs2015.org
-```
-
-Add your public key to:
-
-```
-~/.ssh/authorized_keys
-```
