@@ -14,16 +14,23 @@ $cherubs_config = array(
     "city" => array("living-in-evanston", "going-to-chicago"),
     "experiences" => array("journalism-reflections", "personal-insight")
   ),
-  "section_featured_slug" => "featured-story"
+  "section_featured_slug" => "featured-story",
+  "graphic_format_slug" => "graphic"
 );
 
 // ADD FEATURED IMAGE SUPPORT
 
 add_theme_support( 'post-thumbnails' );
 
+// ADD IMAGE SIZES
+
 add_image_size( 'homepage-thumbnail', 212, 141, true );
 add_image_size( 'section-featured-thumbnail', 635, 424, true );
 add_image_size( 'section-thumbnail', 120, 80, true );
+
+// ADD
+
+add_theme_support( 'post-formats', array( 'gallery', 'audio', 'video', 'image' ) );
 
 // ADD MENU SUPPORT
 add_theme_support( 'menus' );
@@ -106,6 +113,12 @@ function get_section_categories() {
 function get_section_featured_id() {
   global $cherubs_config;
   $category = get_category_by_slug($cherubs_config["section_featured_slug"]);
+  return $category->term_id;
+}
+
+function get_graphic_format_id() {
+  global $cherubs_config;
+  $category = get_category_by_slug($cherubs_config["graphic_format_slug"]);
   return $category->term_id;
 }
 
