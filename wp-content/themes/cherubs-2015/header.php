@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title><?php wp_title('', true, 'right'); ?> - <?php echo get_bloginfo("name") ?></title>
+  <?php $page_title = wp_title('', false, 'right') ?>
+  <title><?php echo $page_title ? $page_title : "Home"; ?> - <?php echo get_bloginfo("name") ?></title>
 
   <!-- icons & favicons -->
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">

@@ -3,7 +3,7 @@ Welcome!
 
 ## Installation
 
-You don't need to use MAMP, but it's probably the easiest way to get PHP, MySQL and Apache running on a Mac.
+You don't need to use MAMP, but it's probably the easiest way:
 
 * [Install MAMP](https://www.mamp.info/en/downloads/)
 * Clone this repo: `git clone git@github.com:medillcherubs/2015-wordpress-site.git`
@@ -15,8 +15,8 @@ You don't need to use MAMP, but it's probably the easiest way to get PHP, MySQL 
   * `php5.5.23_X`
   * `php5.6.7_X`
 * Set the MAMP Document Root to the `2015-wordpress-site` folder.
-* Create a new mySQL table named "wordpress". For example, you can use [SequelPro](http://www.sequelpro.com/) to do this easily.
-* Start the MAMP servers.
+* Create a new mySQL table named "wordpress". You can use [SequelPro](http://www.sequelpro.com/) to do this..
+* Start MAMP.
 * Open http://localhost:8888 and set up Wordpress.
     - Usually using "root" for your username and password will work.
     - View http://localhost:8888/MAMP/ for your MySQL configuration.
@@ -28,20 +28,6 @@ All files are in `wp-content/themes/cherubs-2015`:
 
 * `style.css` — Main stylesheet
 * `header.php` — Add CSS `link` and JS `script` tags here
-
-## Pages and Page Templates
-
-Some pages have custom layouts, like the grid of all cherubs. When you create a page in Wordpress, set the Page Template (on the [right side of Edit Page](https://cloud.githubusercontent.com/assets/333527/8890884/22107e04-32d7-11e5-912f-f190873d1354.png)) to the correct file:
-
-* Class of 2015 — Class of 2015 (`page-class-of-2015.php`)
-
-## Theme Customization
-
-### Top Menu
-
-In `Appearance > Menus`, add a menu called `Top Navigation`. Add pages and categories there. Under `Theme Locations`, check `Header Menu`.
-
-Theme must add menu support in `functions.php`.
 
 ## Development
 
@@ -84,7 +70,12 @@ The target PHP version is 5.4.24. There is no FTP access.
 * Contact
 * Apply
 * Staff
-* Class of 2015
+* Class of 2015 (template: Class of 2015)
+* Homepage (template: Homepage)
+
+### Theme Customization
+
+In Wordpress, go to Appearance > Customize > Static Front Page > A Static Page > Homepage > Save & Publish.
 
 ### Menus
 
@@ -96,11 +87,11 @@ Top Navigation (theme location: Header Menu)
 * Contact
 * Apply
 
-Footer Navigation (theme location: Footer Menu)
-* Twitter
+Footer Nav (theme location: Footer Menu)
+* Twitter (https://twitter.com/medillcherubs)
 * Class of 2015
-* 2014 Site
-* Medill
+* 2014 Site (https://cherubs.medill.northwestern.edu/2014)
+* Medill (https://www.medill.northwestern.edu)
 * Staff
 
 Homepage Teaser (theme location: Homepage Teaser)
@@ -108,6 +99,8 @@ Homepage Teaser (theme location: Homepage Teaser)
 * Apply
 
 ### Plugins
+
+Activate plugins:
 
 * "Co-Authors Plus" by Mohammad Jangda, Daniel Bachhuber, Automattic
 * "Import users from CSV with meta" by codection
@@ -128,13 +121,21 @@ Homepage Teaser (theme location: Homepage Teaser)
 * "User Meta Pro" by Khaled Hossain
 * "WP Subtitle" by Husani Oakley, Ben Huson
 
+### Import Users
 
-# DreamHost VPS Deployment
+Use "Import users from CSV with meta" to add users.
+
+## DreamHost VPS Deployment
+
+When you push to master, the theme will automatically be deployed to master using [Simple PHP Git Deploy](https://github.com/markomarkovic/simple-php-git-deploy).
+
 
 SSH (password in the Google Doc):
 
 ```
 ssh cherubadmin@ps447908.dreamhostps.com
+OR
+ssh cherubadmin@cherubs2015.org
 ```
 
 Add your public key to:

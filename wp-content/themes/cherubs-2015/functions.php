@@ -17,11 +17,13 @@ $cherubs_config = array(
   "section_featured_slug" => "featured-story"
 );
 
-// $homepage_teaser_category_slugs
-// $homepage_teaser_category_slugs = array("academics", "campus", "city", "experiences");
+// ADD FEATURED IMAGE SUPPORT
 
-// the category that makes posts appear in the homepage teaser slots
-// $homepage_teaser_category_slug = array("homepage-section-teaser");
+add_theme_support( 'post-thumbnails' );
+
+add_image_size( 'homepage-thumbnail', 212, 141, true );
+add_image_size( 'section-featured-thumbnail', 635, 424, true );
+add_image_size( 'section-thumbnail', 120, 80, true );
 
 // ADD MENU SUPPORT
 add_theme_support( 'menus' );
@@ -36,15 +38,13 @@ function register_my_menus(){
   );
 }
 
-// SHOW CUSTOM FIELDS
+// SHOW CUSTOM FIELDS AND EXCERPTS
 
 add_action('admin_head', 'my_custom_styles');
 
 function my_custom_styles() {
-  echo '<style> #postcustom { display: block !important; } </style>';
+  echo '<style> #postcustom, #postexcerpt { display: block !important; } </style>';
 }
-
-// add_action( 'admin_enqueue_scripts', 'add_admin_scripts', 10, 1 );
 
 function full_width(){
 	return in_category('full-width') == 1;
@@ -53,7 +53,7 @@ function full_width(){
 function menu_search($items, $args){
   $search = "";
   if ($args->menu_class === "top-menu") {
-    $search = '<li class="menu-item search-input"><img id="search-img" src="http://cherubs.medill.northwestern.edu/wp-content/uploads/2014/07/magnifying_glass1.png"> <form class="search-form" action="http://cherubs.medill.northwestern.edu/2015/" method="get"><input type="text" class="search" placeholder="Search" name="s" value="" class="placeholder"></form></li>';
+    $search = '<li class="menu-item search-input"><img id="search-img" src="http://cherubs.medill.northwestern.edu/wp-content/uploads/2014/07/magnifying_glass1.png"> <form class="search-form" action="' . get_search_link() . '" method="get"><input type="text" class="search" placeholder="Search" name="s" value="" class="placeholder"></form></li>';
   }
   return $items . $search;
 }
