@@ -203,9 +203,11 @@ function setup_site() {
 function create_category($term, $category_id) {
   if(!is_term($term, "category")){
     if ($category_id) {
-      return wp_insert_term($term, "category", array( "parent" => $category_id ));
+      $term_object = wp_insert_term($term, "category", array( "parent" => $category_id ));
+      return $term_object->term_taxonomy_id;
     } else {
-      return wp_insert_term($term, "category");
+      $term_object = wp_insert_term($term, "category");
+      return $term_object->term_taxonomy_id;
     }
   } else {
     return get_cat_ID($term);
