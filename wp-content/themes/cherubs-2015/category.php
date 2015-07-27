@@ -111,19 +111,19 @@ $categories = $subcategories[$category_id];
                     </div>
 
                     <?php $format = get_post_format( $post->ID ); ?>
-                    <?php if (in_category(164)) $format = "graphic"; ?>
+                    <?php if (in_category(get_graphic_format_id())) $format = "graphic"; ?>
 
                     <?php if ($format) : ?>
 
                       <div class="icon icon-<?php echo $format; ?>">
                         <?php if ($format == "video") : ?>
-                          <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/glyphicons_180_facetime_video.png" alt="">
+                          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/glyphicons-181-facetime-video.png" alt="">
                         <?php elseif ($format == "gallery" || $format == "image") : ?>
-                          <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/glyphicons_011_camera.png" alt="">
+                          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/glyphicons-12-camera.png" alt="">
                         <?php elseif ($format == "audio") : ?>
-                          <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/audio-icon.png" alt="">
+                          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/audio-icon.png" alt="">
                         <?php elseif ($format == "graphic") : ?>
-                          <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/glyphicons_041_charts.png" alt="">
+                          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/glyphicons-42-charts.png" alt="">
 
                         <?php endif; ?>
                       </div>

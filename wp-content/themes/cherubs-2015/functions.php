@@ -14,7 +14,8 @@ $cherubs_config = array(
     "city" => array("living-in-evanston", "going-to-chicago"),
     "experiences" => array("journalism-reflections", "personal-insight")
   ),
-  "section_featured_slug" => "featured-story"
+  "section_featured_slug" => "featured-story",
+  "graphic_format_slug" => "graphic"
 );
 
 // ADD FEATURED IMAGE SUPPORT
@@ -112,6 +113,12 @@ function get_section_categories() {
 function get_section_featured_id() {
   global $cherubs_config;
   $category = get_category_by_slug($cherubs_config["section_featured_slug"]);
+  return $category->term_id;
+}
+
+function get_graphic_format_id() {
+  global $cherubs_config;
+  $category = get_category_by_slug($cherubs_config["graphic_format_slug"]);
   return $category->term_id;
 }
 
