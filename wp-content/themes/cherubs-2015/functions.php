@@ -133,8 +133,7 @@ function stories_by() {
 
 	foreach ($last_names as $key => $last) {
 		$authors[] = (object) array(
-			// "image" => "http://www.medillcherubs.org/2013/wp-content/themes/medill-cherubs/profile-images/$last" . str_replace(" ", "", $first_names[$key]) . ".png",
-			"image" => 'http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/annesnabes-150x150.jpg',
+			"image" => get_profile_image_path() . $last . str_replace(" ", "", $first_names[$key]) . ".png",
 			"last_name" => $last_names[$key],
 			"first_name" => $first_names[$key],
 			"name" => $first_names[$key]." ".$last_names[$key],
