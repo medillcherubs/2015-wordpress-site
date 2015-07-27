@@ -292,6 +292,10 @@ body .article-author > div {
   margin: 4px 0 20px 0;
 }
 
+.single-post .main-content iframe {
+  width: 100% !important;
+}
+
 .slideshow_container_style-dark .slideshow_description_box div.slideshow_title {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px !important;
