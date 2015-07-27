@@ -51,7 +51,7 @@ function full_width(){
 function menu_search($items, $args){
   $search = "";
   if ($args->menu_class === "top-menu") {
-    $search = '<li class="menu-item search-input"><img id="search-img" src="http://cherubs.medill.northwestern.edu/wp-content/uploads/2014/07/magnifying_glass1.png"> <form class="search-form" action="http://cherubs.medill.northwestern.edu/2015/" method="get"><input type="text" class="search" placeholder="Search" name="s" value="" class="placeholder"></form></li>';
+    $search = '<li class="menu-item search-input"><img id="search-img" src="http://cherubs.medill.northwestern.edu/wp-content/uploads/2014/07/magnifying_glass1.png"> <form class="search-form" action="' . get_search_link() . '" method="get"><input type="text" class="search" placeholder="Search" name="s" value="" class="placeholder"></form></li>';
   }
   return $items . $search;
 }
