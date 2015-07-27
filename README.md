@@ -58,13 +58,53 @@ The target PHP version is 5.4.24. There is no FTP access.
 
 ### Categories
 
-* slug: full-width
-* slug: academics
-* slug: campus
-* slug: city
-* slug: experiences
-* slug: homepage-section-teaser
-* slug: homepage-video
+* Full-Width
+* Academics
+  * Program Overview
+  * Learning
+  * Guest Speakers
+  * Reporting and Editing
+* Campus
+  * Residential Life
+  * Exploring Campus
+* City
+  * Living in Evanston
+  * Going to Chicago
+* Experiences
+  * Journalism Reflections
+  * Personal Insight
+* Homepage Section Teaser
+* Homepage Video
+* Featured Story
+
+### Pages
+
+* About
+* Contact
+* Apply
+* Staff
+* Class of 2015
+
+### Menus
+
+Top Navigation (theme location: Header Menu)
+* About
+* Academics
+* City
+* Experiences
+* Contact
+* Apply
+
+Footer Navigation (theme location: Footer Menu)
+* Twitter
+* Class of 2015
+* 2014 Site
+* Medill
+* Staff
+
+Homepage Teaser (theme location: Homepage Teaser)
+* About the program
+* Apply
 
 ### Plugins
 
