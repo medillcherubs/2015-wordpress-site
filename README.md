@@ -87,6 +87,10 @@ The target PHP version is 5.4.24. There is no FTP access.
 * Class of 2015 (template: Class of 2015)
 * Homepage (template: Homepage)
 
+### Theme Customization
+
+In Wordpress, go to Appearance > Customize > Static Front Page > A Static Page > Homepage > Save & Publish.
+
 ### Menus
 
 Top Navigation (theme location: Header Menu)
@@ -98,10 +102,10 @@ Top Navigation (theme location: Header Menu)
 * Apply
 
 Footer Navigation (theme location: Footer Menu)
-* Twitter
+* Twitter (https://twitter.com/medillcherubs)
 * Class of 2015
-* 2014 Site
-* Medill
+* 2014 Site (https://cherubs.medill.northwestern.edu/2014)
+* Medill (https://www.medill.northwestern.edu)
 * Staff
 
 Homepage Teaser (theme location: Homepage Teaser)
