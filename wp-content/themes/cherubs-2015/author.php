@@ -17,7 +17,7 @@
 
   <h1 class="profile-title">
 
-    <?php echo $curauth->display_name; ?>
+    <?php echo get_the_author_meta( 'Display_Name', $curauth->ID ); ?>
 
     <span class="profile-location">
       <?php echo get_the_author_meta( 'Hometown', $curauth->ID ) ?>
@@ -37,19 +37,19 @@
 
   <div class="large-6 columns">
 
-    <div class="profile-section">
+   <!--  <div class="profile-section">
       <h3 class="profile-section-title">Bio</h3>
-      <p class="profile-section-body"><?php echo get_the_author_meta( "bio", $curauth->ID ); ?></p>
-    </div>
+      <p class="profile-section-body"><?//php echo get_the_author_meta( "bio", $curauth->ID ); ?></p>
+    </div> -->
 
     <div class="profile-section">
       <h3 class="profile-section-title">Journalism highlight</h3>
-      <p class="profile-section-body"><?php echo get_the_author_meta( "journalism_highlight", $curauth->ID ); ?></p>
+      <p class="profile-section-body"><?php echo get_the_author_meta( "Journalism Highlights", $curauth->ID ); ?></p>
     </div>
 
     <div class="profile-section">
       <h3 class="profile-section-title">Favorite cherub moment</h3>
-      <p class="profile-section-body"><?php echo get_the_author_meta( "favorite_cherub_moment", $curauth->ID ); ?></p>
+      <p class="profile-section-body"><?php echo get_the_author_meta( "Favorite Cherub Moment", $curauth->ID ); ?></p>
     </div>
 
     <?php if (get_the_author_meta( "twitter", $curauth->ID )) : ?>
@@ -58,7 +58,7 @@
         <h3 class="profile-section-title">Twitter</h3>
         <p class="profile-section-body">
           <a href="https://www.twitter.com/<?php echo $twitter; ?>">
-            <?php echo get_the_author_meta( "twitter", $curauth->ID ); ?>
+            <?php echo get_the_author_meta( "Twitter Handle", $curauth->ID ); ?>
           </a>
         </p>
       </div>
