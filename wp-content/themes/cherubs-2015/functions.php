@@ -21,6 +21,8 @@ $cherubs_config = array(
 
 add_theme_support( 'post-thumbnails' );
 
+add_image_size( 'homepage-thumbnail', 212, 141, true );
+
 // ADD MENU SUPPORT
 add_theme_support( 'menus' );
 add_action('init', 'register_my_menus');
