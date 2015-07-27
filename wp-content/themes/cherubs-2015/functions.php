@@ -133,7 +133,6 @@ function stories_by() {
 
 	foreach ($last_names as $key => $last) {
 		$authors[] = (object) array(
-			"image" => get_profile_image_path() . $first_names[$key] . "_" . $last . ".png",
 			"last_name" => $last_names[$key],
 			"first_name" => $first_names[$key],
 			"name" => $first_names[$key]." ".$last_names[$key],
@@ -177,8 +176,7 @@ function cherub_authors($authors, $type = "Story") {
 
   		$html .= "<li class='article-author clearfix'>";
   			$html .= "<div class='author-image-container'>";
-  				$html .= "<!-- <img src='http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/" . preg_replace('/[\s+\-]/', '', strtolower($author->login)) . "-150x150.jpg' class='author-image' /> -->";
-  				$html .= "<img src='" . $author->image . "' class='author-image' />";
+  				$html .= "<img src='http://cherubs.medill.northwestern.edu/2014/wp-content/uploads/sites/5/2014/07/" . preg_replace('/[\s+\-]/', '', strtolower($author->login)) . "-150x150.jpg' class='author-image' />";
   			$html .= "</div>";
   			$html .= "<div class='author-info'>";
           $url = get_author_posts_url( $author->id );
