@@ -660,4 +660,6 @@ ul.page_navi li.current span {
 .archive-story .icon {
   float: left;
   margin-right: 5px;
+  width: 20px;
+  margin-top: -2px;
 }
