@@ -59,7 +59,7 @@ $categories = $subcategories[$category_id];
               $permalink = get_permalink();
               $title = get_the_title();
               $excerpt = get_the_excerpt();
-              $thumbnail = get_the_post_thumbnail(  $post->ID, "section-featured" );
+              $thumbnail = get_the_post_thumbnail(  $post->ID, "section-featured-thumbnail" );
               $found_featured = true;
             ?>
           <?php endwhile; ?>
@@ -107,7 +107,7 @@ $categories = $subcategories[$category_id];
                   <div class="archive-story">
 
                     <div class="article-thumbnail">
-                      <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail( 'rectangle-thumbnail' ); ?></a>
+                      <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail( 'section-thumbnail' ); ?></a>
                     </div>
 
                     <?php $format = get_post_format( $post->ID ); ?>
