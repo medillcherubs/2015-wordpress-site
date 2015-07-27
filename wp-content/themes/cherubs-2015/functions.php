@@ -44,7 +44,7 @@ function my_custom_styles() {
   echo '<style> #postcustom { display: block !important; } </style>';
 }
 
-add_action( 'admin_enqueue_scripts', 'add_admin_scripts', 10, 1 );
+// add_action( 'admin_enqueue_scripts', 'add_admin_scripts', 10, 1 );
 
 function full_width(){
 	return in_category('full-width') == 1;
