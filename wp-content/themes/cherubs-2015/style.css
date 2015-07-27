@@ -279,7 +279,7 @@ body .article-author > div {
 
 .wp-caption {
   width: 100% !important;
-} 
+}
 
 .wp-caption img {
   width: 100% !important;
@@ -655,4 +655,9 @@ ul.page_navi li.current span {
 
 .archive-story .entry-title a {
     color: #191919;
+}
+
+.archive-story .icon {
+  float: left;
+  margin-right: 5px;
 }
