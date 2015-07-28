@@ -1,0 +1,43 @@
+.staff {
+  margin-left: 21px;
+  clear: left;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+.staff ul, .staff li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.staff .profile {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 216px;
+  min-height: 820px;
+}
+.staff .profile img {
+  width: 100%;
+
+}
+.img-staff {
+  width: 800px;
+  display: block;
+  margin: 0 auto 50px auto !important;
+}
+
+.post_content img {
+  margin-left: 0;
+}
+.page-title {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+article {
+   margin-left: 0px;
+}
+
+article h1 {
+text-align: center;
+}
