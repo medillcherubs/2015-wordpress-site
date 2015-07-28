@@ -18,6 +18,8 @@ $cherubs_config = array(
   "graphic_format_slug" => "graphic"
 );
 
+add_filter( 'user_can_richedit', '__return_true' );
+
 // ADD FEATURED IMAGE SUPPORT
 
 add_theme_support( 'post-thumbnails' );
