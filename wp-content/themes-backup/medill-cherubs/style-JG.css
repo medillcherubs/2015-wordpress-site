@@ -1,0 +1,155 @@
+/*
+
+
+============================================
+
+DO NOT USE ME -- KEPT ONLY AS REFERENCE!!!!!
+
+============================================
+
+
+Theme Name: Wordpress Foundation Child (aka Son of Cherub)
+Theme URI: http://320press.com/wpfoundation
+Description: Secondary, temporary stylesheet for the child theme for the bones/Zurb foundation based wordpress theme.
+Version: 0.2
+Author: 320press
+Author URI: http://320press.com
+Template: wp-foundation
+Tags: bones, zurb, foundation, 320press, clean, basic
+*/
+
+/* TYPE STYLES */
+/* body a:hover {} */
+.nav-bar > li.active,.nav-bar > li:hover,.nav-bar > li:active,.nav-bar > li:focus{background-color:#c9c9c9;border:none;}
+article h2 {font-size:20px;}
+
+/* SECTION FRONT STLES */
+/*header {overflow: auto;}*/
+header ul.top-nav, header ul.nav-bar {clear:both;}
+header .siteinfo {width: 100%;float:none;margin-top:-15px;}
+header a#logo{display:block;background:url('/wp-content/themes/medill-cherubs/logo/medill-cherub-logo-2014.png') no-repeat;background-size:100%;background-position: bottom center;margin:0 auto;margin-bottom:25px;}
+header a#logo-small{display:none;}
+header .icon-medill-cherub-logo-outline {margin:0 auto;}
+/* NAVIGATION */
+header .top-nav > li > a {color: #222222 !important;font-size:11pt !important;font-weight:300;padding:0;margin:0;text-transform:lowercase;}
+header ul.top-nav, header ul.nav-bar{background:none;margin:-5px 0 5px 0;float:none;text-align:center;margin:0 auto;}
+header .nav-bar a{font-size:12pt !important;}
+.nav-bar > li {float:none;display:inline-block;background:#e9e9e9;/* -webkit-border-radius: 30px; */-moz-border-radius: 30px;/* border-radius: 30px; *//* margin-right:15px; */line-height:28px !important;}
+.nav-bar > li:last-child{margin-right:0;}
+.nav-bar > li:hover {background:#c9c9c9;-webkit-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.05);-moz-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.05);box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.05);}
+.nav-bar > li:hover a,.nav-bar > li a:hover{color:#000 !important;}
+header .nav-bar > li {display:inline-block;float:none;margin-right:-3px;}
+header #menu-sections{margin:-5px 0 10px 0;}
+header .show-for-small .small{width:inherit;}
+/* CALL TO ACTION */
+header .cta,header .menu-call-to-action-container {overflow:auto;}
+header #menu-call-to-action.menu {
+  display:inherit;
+  overflow:auto;
+  float:right;
+  padding:0;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  }
+header #menu-call-to-action.menu > li {
+  list-style-type: none;
+  float:left;
+  padding:2px 20px 4px 20px;
+  text-align:center;
+  background: #773284; /* Old browsers */
+  background: -moz-linear-gradient(top,  #773284 0%, #5d2067 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#773284), color-stop(100%,#5d2067)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #773284 0%,#5d2067 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #773284 0%,#5d2067 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #773284 0%,#5d2067 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #773284 0%,#5d2067 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#773284', endColorstr='#5d2067',GradientType=0 ); /* IE6-9 */
+  -webkit-box-shadow: inset -1px 0px 3px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: inset -1px 0px 3px 0px rgba(0,0,0,0.35);
+  box-shadow: inset -1px 0px 3px 0px rgba(0,0,0,0.35);
+  }
+header #menu-call-to-action.menu > li:hover,header #menu-call-to-action.menu > li > a:hover {
+  color:#efefef !important;
+}
+header #menu-call-to-action.menu > li:hover {
+  background: #59345e; /* Old browsers */
+  background: -moz-linear-gradient(top,  #59345e 0%, #2f0036 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#59345e), color-stop(100%,#2f0036)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #59345e 0%,#2f0036 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #59345e 0%,#2f0036 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #59345e 0%,#2f0036 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #59345e 0%,#2f0036 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59345e', endColorstr='#2f0036',GradientType=0 ); /* IE6-9 */
+}
+header #menu-call-to-action.menu > li:first-child{padding-right:20px;border-right:1px #ccc solid;}
+header #menu-call-to-action.menu > li > a {color:white;font-weight:600;text-transform:lowercase;text-shadow: 0px 1px 2px rgba(0, 0, 0, .35);}
+header #menu-call-to-action.menu > li > a:hover {color:#ccc;}
+
+/* AUTHOR */
+.author .profile-section h4 {display:inline;}
+
+/* FOOTER
+
+footer ul#menu-footer-links li{
+  display: inline-block;
+  float: none;
+  margin-right: -3px !important;
+  background: #e9e9e9;
+  line-height: 28px !important;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border-right: none;
+  padding: 0 20px;
+}
+
+footer ul#menu-footer-links li:first-child {
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+footer ul#menu-footer-links li:last-child {
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+footer ul#menu-footer-links li:hover {
+  background:#c9c9c9 !important;
+  border-bottom:none;
+} */
+footer .menu {
+  overflow: inherit;
+}
+
+
+/* AUTHOR PAGE */
+.profile_title .bullet {
+  font-weight:bold;
+  padding-right: 15px;
+}
+
+/* BREAK POINTS */
+
+@media all and (max-width:727px) {
+  /* header a#logo-small {display:block;} */
+  header a#logo {background:url('/2013/wp-content/themes/medill-cherubs/logo/small/medill-cherub-logo-small.png') no-repeat;background-position:0 15px;height:70px;width:302px;margin: 20px auto 0 auto;}
+  /* header .menu{display:block;text-align:center;} */
+        #menu-sections { display: block !important; }
+  header .menu li{display:inline-block;font-size: 10pt;float: none;margin-right: -3px !important;line-height: 28px !important;position: relative;padding: 0;margin: 0;border-right: none;padding: 0 20px;}
+  footer ul#menu-footer-links{text-align:center;}
+  footer ul#menu-footer-links li{background:none;}
+        header .nav-bar > li { margin-bottom: 5px; }
+header .nav-bar > li:nth-child(4) {
+border-top-left-radius: 7px;
+border-bottom-left-radius: 7px;
+}
+header .nav-bar > li:nth-child(3) {
+border-top-right-radius: 7px;
+border-bottom-right-radius: 7px;
+}
+  footer ul#menu-footer-links li:first-child,footer ul#menu-footer-links li:last-child{border-radius:0;margin-bottom:10px;display:inline-block;}
+
+}
