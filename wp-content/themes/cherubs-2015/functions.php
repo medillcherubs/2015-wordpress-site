@@ -57,6 +57,10 @@ function full_width(){
 	return in_category('full-width') == 1;
 }
 
+function no_headline(){
+	return in_category('no-headline') == 1;
+}
+
 function menu_search($items, $args){
   $search = "";
   if ($args->menu_class === "top-menu") {

@@ -11,12 +11,14 @@
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
+				<?php if (!no_headline()) { ?>
 				<header>
 
 					<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
 					<h2 class="single-subtitle"><?php the_subtitle(); ?></h2>
 
 				</header>
+				<?php } ?>
 
 				<section class="post_content clearfix" itemprop="articleBody">
 
