@@ -124,6 +124,7 @@ Activate plugins:
 * "User Meta Pro" by Khaled Hossain
 * "User Role Editor" by Vladimir Garagulya
     - User -> User Role Editor -> Author settings -> Check "unfiltered_html" -> Save
+    - Add a new role named "Cherub" with the slug "cherub" that has the same perimssions as "Editor". All Cherubs should be assigned to this role.
 * "WP Subtitle" by Husani Oakley, Ben Huson
 
 ### Import Users
