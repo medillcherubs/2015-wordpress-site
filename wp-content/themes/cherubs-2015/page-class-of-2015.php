@@ -29,7 +29,7 @@ Template Name: Class of 2015
                 <img class="cherub-image" src="<?php echo get_profile_image_path() . str_replace(' ', '', str_replace('-', '', $user->user_login)); ?>-150x150.jpg">
               </div>
               <div class="cherub-name">
-                <?php echo $user->user_firstname . ' ' . $user->user_lastname; ?>
+                <?php echo get_the_author_meta( 'Display_Name', $user->id ) ?>
               </div>
             </a>
           </div>
