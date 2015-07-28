@@ -11,7 +11,7 @@
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-				<?php if (!no_headline()) { ?>
+				<?php if (no_headline() == false) { ?>
 				<header>
 
 					<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
