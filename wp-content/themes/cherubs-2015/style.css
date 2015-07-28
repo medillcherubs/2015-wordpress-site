@@ -57,6 +57,10 @@ h1, h2, h3, h4, h5, h6 {
   float: none;
 }
 
+li.menu-item.search-input {
+  padding: 3px 12px 5px;
+}
+
 /* TOP NAVIGATION */
 
 .menu-top-navigation-container {
@@ -89,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 10pt;
   font-weight: 300;
   padding: 4px 16px;
+  display: block;
 }
 
 /* FOOTER NAV */
