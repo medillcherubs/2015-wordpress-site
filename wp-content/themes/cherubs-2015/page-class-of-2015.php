@@ -11,13 +11,11 @@ Template Name: Class of 2015
   <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix full-page'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header>
-
       <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-
     </header> <!-- end article header -->
 
     <section class="post_content clearfix" itemprop="articleBody">
-      <?php $blogusers = get_users( 'blog_id=1&orderby=lastname' ); // Array of WP_User objects. ?>
+      <?php $blogusers = get_users( 'blog_id=1&orderby=lastname&role=cherub' ); // Array of WP_User objects. ?>
 
       <?php usort($blogusers, create_function('$a, $b', 'if ($a->last_name == $b->last_name) return strnatcasecmp($a->first_name, $b->first_name); else return strnatcasecmp($a->last_name, $b->last_name);')); ?>
 
