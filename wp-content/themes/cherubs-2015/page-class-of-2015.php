@@ -26,7 +26,7 @@ Template Name: Class of 2015
           <div class="cherub-box">
             <a href="<?php echo $url; ?>">
               <div class="cherub-image-box">
-                <img class="cherub-image" src="<?php echo get_profile_image_path() . str_replace(' ', '', str_replace('-', '', $user->user_login)); ?>.jpg">
+                <img class="cherub-image" src="<?php echo get_profile_image_path() . "cherubs-150x100/" . str_replace(' ', '', str_replace('-', '', $user->user_login)); ?>.jpg">
               </div>
               <div class="cherub-name">
                 <?php echo get_the_author_meta( 'Display_Name', $user->id ) ?>
