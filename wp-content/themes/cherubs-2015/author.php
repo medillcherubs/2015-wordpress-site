@@ -32,7 +32,7 @@
 <div class="clearfix" style="padding-bottom: 30px;">
 
   <div class="large-6 columns">
-    <img class="profile-picture" src="<?php echo get_profile_image_path() . $photoslug; ?>.jpg" />
+    <img class="profile-picture" src="<?php echo get_profile_image_path() . "cherubs/" . $photoslug; ?>.jpg" />
   </div>
 
   <div class="large-6 columns">
