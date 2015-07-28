@@ -176,7 +176,7 @@ function cherub_authors($authors, $type = "Story") {
 
   		$html .= "<li class='article-author clearfix'>";
   			$html .= "<div class='author-image-container'>";
-  				$html .= "<img src='http://www.cherubs2015.org/wp-content/themes/cherubs-2015/cherubs/" . preg_replace('/[\s+\-]/', '', strtolower($author->login)) . ".jpg' class='author-image' />";
+  				$html .= "<img src='http://www.cherubs2015.org/wp-content/themes/cherubs-2015/cherubs-thumbs/" . preg_replace('/[\s+\-]/', '', strtolower($author->login)) . ".jpg' class='author-image' />";
   			$html .= "</div>";
   			$html .= "<div class='author-info'>";
           $url = get_author_posts_url( $author->id );
