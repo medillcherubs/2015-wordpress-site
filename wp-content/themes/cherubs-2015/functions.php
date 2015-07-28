@@ -18,6 +18,9 @@ $cherubs_config = array(
   "graphic_format_slug" => "graphic"
 );
 
+// DISABLE RICH TEXT EDITOR
+add_filter( 'user_can_richedit', '__return_false' );
+
 // ADD FEATURED IMAGE SUPPORT
 
 add_theme_support( 'post-thumbnails' );
