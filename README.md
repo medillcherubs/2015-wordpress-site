@@ -122,6 +122,8 @@ Activate plugins:
         + Hide navigation buttons, show when mouse hovers over: NO
         + Hide pagination, show when mouse hovers over: NO
 * "User Meta Pro" by Khaled Hossain
+* "User Role Editor" by Vladimir Garagulya
+    - User -> User Role Editor -> Author settings -> Check "unfiltered_html" -> Save
 * "WP Subtitle" by Husani Oakley, Ben Huson
 
 ### Import Users
