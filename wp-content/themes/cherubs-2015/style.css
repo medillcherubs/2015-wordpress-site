@@ -663,3 +663,11 @@ ul.page_navi li.current span {
   width: 20px;
   margin-top: -2px;
 }
+
+.menu-homepage-teaser-container ul {
+  margin-left: 0;
+}
+
+.menu-homepage-teaser-container .menu-item {
+  margin-right: 15px;
+}
