@@ -374,6 +374,8 @@ body .article-author > div {
   line-height: 49px;
   font-weight: 300;
   margin-top: 20px;
+  margin-left: 14px;
+  padding-left: 6px;
 }
 
 .profile-location {
