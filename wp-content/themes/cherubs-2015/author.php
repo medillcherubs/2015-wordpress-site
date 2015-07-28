@@ -29,7 +29,7 @@
 
 </div> <!-- profile header -->
 
-<div>
+<div class="clearfix" style="padding-bottom: 30px;">
 
   <div class="large-6 columns">
     <img class="profile-picture" src="<?php echo get_profile_image_path() . $photoslug; ?>.jpg" />
