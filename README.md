@@ -144,3 +144,5 @@ When you push to master, the theme will automatically be deployed to master usin
 * Better default image sizes, so that medium images are larger
 * Show the URL for each image size in the media library
 * Hide the URL for the original image
+* Let people create, remote and re-order subcategories from the admin
+* Let people order posts in the admin
