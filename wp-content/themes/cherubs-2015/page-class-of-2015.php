@@ -15,7 +15,9 @@ Template Name: Class of 2015
     </header> <!-- end article header -->
 
     <section class="post_content clearfix" itemprop="articleBody">
-      <?php $blogusers = get_users( 'blog_id=1&orderby=lastname&role=cherub' ); // Array of WP_User objects. ?>
+      <?php $thisblog = $current_blog->blog_id; ?>
+
+      <?php $blogusers = get_users( 'blog_id='.$thisblog.'&orderby=lastname&role=cherub' ); // Array of WP_User objects. ?>
 
       <?php usort($blogusers, create_function('$a, $b', 'if ($a->last_name == $b->last_name) return strnatcasecmp($a->first_name, $b->first_name); else return strnatcasecmp($a->last_name, $b->last_name);')); ?>
 
