@@ -18,9 +18,10 @@ $cherubs_config = array(
   "graphic_format_slug" => "graphic"
 );
 
-//
+// REDIRECT TO NEW SITE
 function my_admin_notice() {
     // echo "<div class='updated cherub-urgent' style='background-color: yellow; height: 600px; font-weight: bold; font-size: 80px;'><p>Stop editing the site! Any edits you make may be lost. (You're supposed to be in lecture!)</p></div><style>.cherub-urgent p { font-size: 40px; }</style>";
+  echo '<script>if (document.location.hostname === "www.cherubs2015.org" && document.location.href.indexOf("force") == -1) document.location = document.location.href.replace("www.cherubs2015.org/", "cherubs.medill.northwestern.edu/2014/")</script>';
 }
 add_action( 'admin_notices', 'my_admin_notice' );
 
