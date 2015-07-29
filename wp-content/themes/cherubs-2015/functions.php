@@ -20,7 +20,7 @@ $cherubs_config = array(
 
 //
 function my_admin_notice() {
-    echo "<div class='updated' style='background-color: yellow; height: 600px; font-weight: bold; font-size: 80px;'><p>Stop editing the site! Any edits you make may be lost. (You're supposed to be in lecture!)</p></div>";
+    echo "<div class='updated cherub-urgent' style='background-color: yellow; height: 600px; font-weight: bold; font-size: 80px;'><p>Stop editing the site! Any edits you make may be lost. (You're supposed to be in lecture!)</p></div><style>.cherub-urgent p { font-size: 40px; }</style>";
 }
 add_action( 'admin_notices', 'my_admin_notice' );
 
