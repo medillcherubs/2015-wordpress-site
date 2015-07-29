@@ -25,6 +25,8 @@ function my_admin_notice() {
 }
 add_action( 'admin_notices', 'my_admin_notice' );
 
+add_action( 'login_enqueue_scripts', 'my_admin_notice' );
+
 // ADD FEATURED IMAGE SUPPORT
 
 add_theme_support( 'post-thumbnails' );
