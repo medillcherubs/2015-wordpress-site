@@ -18,6 +18,12 @@ $cherubs_config = array(
   "graphic_format_slug" => "graphic"
 );
 
+//
+function my_admin_notice() {
+    echo "<div class='updated' style='background-color: yellow; height: 600px; font-weight: bold;'><p>Stop editing the site! Any edits you make may be lost. (You're supposed to be in lecture!)</p></div>";
+}
+add_action( 'admin_notices', 'my_admin_notice' );
+
 // ADD FEATURED IMAGE SUPPORT
 
 add_theme_support( 'post-thumbnails' );
