@@ -121,7 +121,6 @@ Activate plugins:
         + Automatically slide to the next slide: NO
         + Hide navigation buttons, show when mouse hovers over: NO
         + Hide pagination, show when mouse hovers over: NO
-* "User Meta Pro" by Khaled Hossain
 * "User Role Editor" by Vladimir Garagulya
     - User -> User Role Editor -> Author settings -> Check "unfiltered_html" -> Save
     - Add a new role named "Cherub" with the slug "cherub" that has the same perimssions as "Editor". All Cherubs should be assigned to this role.
