@@ -89,7 +89,7 @@ function nav_params(){
 add_filter('wp_nav_menu_items','menu_search', 10, 2);
 
 function get_profile_image_path() {
-  return "http://www.cherubs2015.org/wp-content/themes/cherubs-2015/";
+  return "http://cherubs.medill.northwestern.edu/2015/wp-content/uploads/sites/6/2015/cherubs/";
 }
 
 // main section categories, such as academics, etc.
@@ -141,6 +141,7 @@ function stories_by() {
 	$user_logins = get_the_coauthor_meta("user_login");
 	$first_names = get_the_coauthor_meta("first_name");
 	$ids = get_the_coauthor_meta("ID");
+	$names = get_the_coauthor_meta("Display_Name");
 
 	$authors = array();
 
@@ -148,7 +149,7 @@ function stories_by() {
 		$authors[] = (object) array(
 			"last_name" => $last_names[$key],
 			"first_name" => $first_names[$key],
-			"name" => $first_names[$key]." ".$last_names[$key],
+			"name" => $names[$key],
       "login" => $user_logins[$key],
       "id" => $ids[$key]
 		);
@@ -162,12 +163,8 @@ function alsoby($type, $authors) {
   $data = array();
   foreach ($authors as $author) {
     $item = get_user_by('login', $author);
-    $item->state = $item->juiz_state;
-    $item->city = $item->juiz_city;
-    $item->country = $item->juiz_country;
-    $item->nickname = $item->display_name;
     $item->login = $author;
-    $item->name = $item->display_name;
+    $item->name = get_the_author_meta( 'Display_Name', $item->ID );
     $data[] = $item;
   }
 
@@ -189,7 +186,7 @@ function cherub_authors($authors, $type = "Story") {
 
   		$html .= "<li class='article-author clearfix'>";
   			$html .= "<div class='author-image-container'>";
-  				$html .= "<img src='".get_profile_image_path()."cherubs-150x150/" . preg_replace('/[\s+\-]/', '', strtolower($author->login)) . ".jpg' class='author-image' />";
+  				$html .= "<img src='".get_profile_image_path() . preg_replace('/[\s+\-]/', '', strtolower($author->login)) . "-150x150.jpg' class='author-image' />";
   			$html .= "</div>";
   			$html .= "<div class='author-info'>";
           $url = get_author_posts_url( $author->id );
