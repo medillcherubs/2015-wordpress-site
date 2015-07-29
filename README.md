@@ -133,3 +133,14 @@ Use "Import users from CSV with meta" to add users.
 ## DreamHost VPS Deployment
 
 When you push to master, the theme will automatically be deployed to master using [Simple PHP Git Deploy](https://github.com/markomarkovic/simple-php-git-deploy).
+
+### Troubleshooting
+
+* Make sure the max file upload size is at least 10 MB for videos and other files
+* Make sure any type of file can be uploaded
+* Make sure that the temp directory for uploads has no max size limit, or can be cleared out (reboot the VPS in Dreamhost)
+
+## To do
+* Better default image sizes, so that medium images are larger
+* Show the URL for each image size in the media library
+* Hide the URL for the original image
