@@ -134,7 +134,7 @@ Use "Import users from CSV with meta" to add users.
 
 When you push to master, the theme will automatically be deployed to master using [Simple PHP Git Deploy](https://github.com/markomarkovic/simple-php-git-deploy).
 
-### Troubleshooting
+## Troubleshooting
 
 * Make sure the max file upload size is at least 10 MB for videos and other files
 * Make sure any type of file can be uploaded
