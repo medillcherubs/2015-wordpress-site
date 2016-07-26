@@ -130,6 +130,10 @@ Activate plugins:
 
 Use "Import users from CSV with meta" to add users.
 
+### User Profile Information
+
+To include additional user profile fields, such as favorite cherub memory, create the fields needed each year. Then, use "Import users from CSV with meta", which will automatically import the meta information and make the fields appear in the user's profiles. 
+
 ## DreamHost VPS Deployment
 
 When you push to master, the theme will automatically be deployed to master using [Simple PHP Git Deploy](https://github.com/markomarkovic/simple-php-git-deploy).
