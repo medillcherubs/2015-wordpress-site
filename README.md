@@ -126,14 +126,19 @@ Activate plugins:
     - Add a new role named "Cherub" with the slug "cherub" that has the same perimssions as "Editor". All Cherubs should be assigned to this role.
 * "WP Subtitle" by Husani Oakley, Ben Huson
 
-### Import Users
+### Create New Wordpress Users
 
-Use "Import users from CSV with meta" to add users.
+Use "Import users from CSV with meta" to add users. Create columns in the following order: `Username`, `Email`, `First_Name`, `Last_Name`, `Password`. [Example Spreadsheet from 2016](https://docs.google.com/spreadsheets/d/13nhsyHGXH_IdsEBNxHP4xJBUpzHK64L1bk7rOt7251M/edit#gid=1657410136)
 
 ### User Profile Information
 
-To include additional user profile fields, such as favorite cherub memory, create the fields needed each year. Then, use "Import users from CSV with meta", which will automatically import the meta information and make the fields appear in the user's profiles. 
-
+To include additional user profile fields, such as favorite cherub memory, you need to use the User Meta plugin. 
+- Under "Shared Fields", create a new field for each item you need.
+- Prep your original Wordpress user spreadsheet with all their additional profile information.
+- Under "Export and Import", import a new CSV with all of their original wordpress information (created during "Create New Wordpress Users") as well as all the additional profile fields data you wish to use.
+- Click and match the headers from the CSV and the fields you created and finalize import.
+- All the user information should now show up in each user's profile.
+ 
 ## DreamHost VPS Deployment
 
 When you push to master, the theme will automatically be deployed to master using [Simple PHP Git Deploy](https://github.com/markomarkovic/simple-php-git-deploy).
