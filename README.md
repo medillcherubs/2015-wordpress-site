@@ -1,6 +1,10 @@
 # Medill Cherubs 2015 Wordpress Theme
 Welcome!
 
+## Need to Add Documentation About
+* Duplicating Theme
+* How to find 2017 page from within the Cherub Network
+
 ## Installation
 
 You don't need to use MAMP, but it's probably the easiest way:
