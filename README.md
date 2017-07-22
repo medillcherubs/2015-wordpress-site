@@ -1,4 +1,4 @@
-# Medill Cherubs 2015 Wordpress Theme
+# Medill Cherubs Wordpress Theme
 Welcome!
 
 ## Need to Add Documentation About
@@ -113,18 +113,6 @@ Activate plugins:
 * "Import users from CSV with meta" by codection
 * "Prime Strategy Page Navi" by Hitoshi Omagari
 * "Raw HTML" by Janis Elsts
-* "Related" by Marcel Pol
-    - Under `Settings` then `Related Posts`, make sure to check the box for `post` in the first two tabs. On the third tab `Content`, check `Add to content` and change the title shown to `Related Stories`
-* "Slideshow" by StefanBoonstra
-    - Default Settings you need to change:
-        + Style: Dark
-        + Max width: 675
-        + Proportional relationship: 675:450
-        + Slideshow's height: 450
-        + Hide description box: NO
-        + Automatically slide to the next slide: NO
-        + Hide navigation buttons, show when mouse hovers over: NO
-        + Hide pagination, show when mouse hovers over: NO
 * "User Role Editor" by Vladimir Garagulya
     - User -> User Role Editor -> Author settings -> Check "unfiltered_html" -> Save
     - Add a new role named "Cherub" with the slug "cherub" that has the same perimssions as "Editor". All Cherubs should be assigned to this role.
