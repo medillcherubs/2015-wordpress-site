@@ -120,7 +120,13 @@ Activate plugins:
 
 ### Create New Wordpress Users
 
-Use "Import users from CSV with meta" to add users. Create columns in the following order: `Username`, `Email`, `First_Name`, `Last_Name`, `Password`. [Example Spreadsheet from 2016](https://docs.google.com/spreadsheets/d/13nhsyHGXH_IdsEBNxHP4xJBUpzHK64L1bk7rOt7251M/edit#gid=1657410136)
+Use "Tools" > "Import users from CSV with meta" to add users. Create columns in the following order: `Username`, `Email`, `First_Name`, `Last_Name`, `Password`. [Example Spreadsheet from 2016](https://docs.google.com/spreadsheets/d/13nhsyHGXH_IdsEBNxHP4xJBUpzHK64L1bk7rOt7251M/edit#gid=1657410136) and [2017](https://docs.google.com/spreadsheets/d/15O-5ZFA_bHNbBkEKxDBSpM4n0UbjHZhrVuQvKcsJuj0/edit?ts=59741f3a#gid=1036836809)
+
+You'll want to make two separate sheets, one for the Cherubs and one for the instuctors. This way, when you import, you can automatically import all the Cherubs under the role "Cherub."
+
+When you import the instructors, give them the role "Editor."
+
+Manually go through and make the relevant people "Admin" after import. This is usually the web week guest instructors, the CAs, Joe, Mary Lou and Cynthia.
 
 ### User Profile Information
 
