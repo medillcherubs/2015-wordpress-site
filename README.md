@@ -111,6 +111,7 @@ Activate plugins:
 
 * "Co-Authors Plus" by Mohammad Jangda, Daniel Bachhuber, Automattic
 * "Import users from CSV with meta" by codection
+* "User Meta Lite" by Khaled Hossain.
 * "Prime Strategy Page Navi" by Hitoshi Omagari
 * "Raw HTML" by Janis Elsts
 * "User Role Editor" by Vladimir Garagulya
@@ -131,7 +132,8 @@ Manually go through and make the relevant people "Admin" after import. This is u
 ### User Profile Information
 
 To include additional user profile fields, such as favorite cherub memory, you need to use the User Meta plugin. 
-- Under "Shared Fields", create a new field for each item you need.
+- Under "Shared Fields", create a new field for each item you need:
+-- test
 - Under "Settings", then "Backend Profile", scroll down to "Extra fields in backend profile" and drag all your newly created fields from "Available Fields" to "Fields in backend profile (Drag from available fields)." 
 - Prep your original Wordpress user spreadsheet with all their additional profile information.
 - Under "Export and Import", import a new CSV with all of their original wordpress information (created during "Create New Wordpress Users") as well as all the additional profile fields data you wish to use.
